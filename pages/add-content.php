@@ -365,7 +365,7 @@
 
 		</div>
 
-		<div class="item">
+		<div class="item" id="pic-upload">
 
 			<h2>تصاویر ملک:</h2>
 
@@ -399,46 +399,7 @@
 
 			</div>
 
-
 		</div>
-<!--
-		<div class="item">
-
-			<h2>تست</h2>
-
-			<div class="numeric-up-down">
-
-				<div class="numeric-up">+</div>
-
-				<div class="numeric-down">-</div>
-
-				<div class="numeric-field">5</div>
-
-				<input class="numeric-field-real-text" name="test1" type="text" value="5">
-
-			</div>
-
-		</div>
-
-		<div class="item">
-
-			<h2>تست</h2>
-
-			<div class="numeric-up-down">
-
-				<div class="numeric-up">+</div>
-
-				<div class="numeric-down">-</div>
-
-				<div class="numeric-field">3</div>
-
-				<input class="numeric-field-real-text" name="test2" type="text" value="3">
-
-			</div>
-
-		</div>
- -->
-
 
 	</div>
 
