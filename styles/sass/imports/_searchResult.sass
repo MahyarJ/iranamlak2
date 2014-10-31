@@ -1,0 +1,105 @@
+$mainColor: #EB2A10
+
+.result-item
+
+	position: relative
+	height: auto
+	margin: -5px
+
+.estate-item
+
+	position: relative
+	background: #AAA
+	margin-bottom: 5px
+	width: 780px
+	height: 40px
+	padding: 5px
+	top: 5px
+	right: 5px
+	cursor: pointer
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #BBB
+
+		.types .type-item
+
+			color: $mainColor
+
+	.date
+
+		background: $mainColor
+		height: 30px
+		width: 75px
+		padding: 5px 10px
+		font-family: 'Yekan'
+		text-align: center
+
+	.total-price
+
+		position: absolute
+		background: $mainColor
+		left: 5px
+		top: 5px
+		bottom: 5px
+		width: 120px
+		text-align: center
+		padding: 5px 10px
+		font-family: 'Yekan'
+		font-size: 18px
+
+	.area
+
+		position: absolute
+		background: $mainColor
+		left: 148px
+		top: 5px
+		width: 100px
+		font-family: 'Yekan'
+		font-size: 12px
+		text-align: center
+
+	.unit-price
+
+		position: absolute
+		background: $mainColor
+		left: 148px
+		bottom: 6px
+		width: 100px
+		font-family: 'Yekan'
+		font-size: 12px
+		text-align: center
+
+	.address
+
+		position: absolute
+		bottom: 5px
+		right: 110px
+
+		.address-item
+
+			color: #000
+			float: right
+			font-size: 16px
+			font-family: 'Yekan'
+			margin-left: 20px
+
+	.types
+
+		position: absolute
+		top: 3px
+		right: 110px
+
+		.type-item
+
+			font-size: 12px
+			font-family: 'Yekan'
+			float: right
+			margin-left: 20px
+			@include transition(color .4s)
+
+
+
+
+

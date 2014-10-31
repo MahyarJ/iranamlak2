@@ -1,0 +1,1230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"formPart"
+			],
+			[
+				"ac",
+				"activePart"
+			],
+			[
+				"div",
+				"divPart"
+			],
+			[
+				"ne",
+				"newEstate"
+			],
+			[
+				"add",
+				"addContent"
+			],
+			[
+				"su",
+				"submitCreated"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"inp",
+				"inputs"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"range",
+				"priceRange"
+			],
+			[
+				"vl",
+				"values"
+			],
+			[
+				"sho",
+				"showMore"
+			],
+			[
+				"ma",
+				"main-content"
+			],
+			[
+				"sh",
+				"showMore"
+			],
+			[
+				"sea",
+				"searchContent"
+			],
+			[
+				"Se",
+				"searchBar"
+			],
+			[
+				"addressI",
+				"addressItem"
+			],
+			[
+				"ad",
+				"address"
+			],
+			[
+				"uni",
+				"unitPrice"
+			],
+			[
+				"tota",
+				"totalPrice"
+			],
+			[
+				"log",
+				"loginOpener"
+			],
+			[
+				"login",
+				"loginData"
+			],
+			[
+				"footer",
+				"footerTab"
+			],
+			[
+				"_c",
+				"_detectEvents"
+			],
+			[
+				"fetch",
+				"fetchCities"
+			],
+			[
+				"s",
+				"stateID"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"ste",
+				"stateQuery"
+			],
+			[
+				"ec",
+				"echo"
+			],
+			[
+				"state_",
+				"state_result"
+			],
+			[
+				"zo",
+				"zone_result"
+			],
+			[
+				"cit",
+				"city_result"
+			],
+			[
+				"bro",
+				"browse01"
+			],
+			[
+				"up",
+				"uploadfile"
+			],
+			[
+				"search",
+				"search-content"
+			],
+			[
+				"req",
+				"req1	require_once …"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"que",
+				"queryStart"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"col",
+				"cols"
+			],
+			[
+				"ov",
+				"ovy	overflow-y"
+			],
+			[
+				"mo",
+				"movement"
+			],
+			[
+				"st",
+				"start"
+			],
+			[
+				"Sc",
+				"Scroll"
+			],
+			[
+				"re",
+				"resultarray"
+			],
+			[
+				"ge",
+				"gheimat"
+			],
+			[
+				"qu",
+				"queryIsClear"
+			],
+			[
+				"es",
+				"estateType"
+			],
+			[
+				"resul",
+				"result"
+			],
+			[
+				"res",
+				"resultarray"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"haya",
+				"hayatkhalvat"
+			],
+			[
+				"te",
+				"temp"
+			],
+			[
+				"fox",
+				"foxie"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"au",
+				"authService"
+			],
+			[
+				"u",
+				"utility"
+			],
+			[
+				"hi",
+				"hideBtn"
+			],
+			[
+				"tra",
+				"transTime"
+			],
+			[
+				"pa",
+				"page"
+			],
+			[
+				"moe",
+				"moveXTo"
+			],
+			[
+				"d",
+				"d:ib	display:inline-block"
+			],
+			[
+				"Ho",
+				"HomePage"
+			],
+			[
+				"pla",
+				"playing"
+			],
+			[
+				"mus",
+				"musicplayer"
+			],
+			[
+				"so",
+				"songname"
+			],
+			[
+				"a",
+				"audioTag"
+			],
+			[
+				"musi",
+				"MusicPlayer"
+			],
+			[
+				"hel",
+				"HelveticaLight"
+			],
+			[
+				"tit",
+				"title_3"
+			],
+			[
+				"ti",
+				"title3"
+			],
+			[
+				"vide",
+				"videoname"
+			],
+			[
+				"i",
+				"item-songname"
+			],
+			[
+				"page",
+				"page1"
+			],
+			[
+				"move",
+				"moveYTo"
+			],
+			[
+				"ret",
+				"ret"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"c",
+				"current_grid"
+			],
+			[
+				"is",
+				"isClient"
+			],
+			[
+				"mete",
+				"Meteor"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"bdr",
+				"bdr+	border-right+"
+			],
+			[
+				"br",
+				"bdr	border-right"
+			],
+			[
+				"lo",
+				"login-user"
+			],
+			[
+				"cou",
+				"courseId"
+			],
+			[
+				"da",
+				"dataObject"
+			],
+			[
+				"data",
+				"dataObject"
+			],
+			[
+				"ta",
+				"taking-data"
+			],
+			[
+				"mov",
+				"movePageRight"
+			],
+			[
+				"Ri",
+				"RibbonPage"
+			],
+			[
+				"hide",
+				"hideOthersExept"
+			],
+			[
+				"ope",
+				"openedBox"
+			],
+			[
+				"_",
+				"_emit"
+			],
+			[
+				"gra",
+				"gradesData"
+			],
+			[
+				"Gra",
+				"GradesView"
+			],
+			[
+				"mod",
+				"model"
+			],
+			[
+				"t",
+				"titles"
+			],
+			[
+				"til",
+				"title"
+			],
+			[
+				"C",
+				"Course"
+			],
+			[
+				"ci",
+				"circles"
+			],
+			[
+				"exa",
+				"examShowing"
+			],
+			[
+				"r",
+				"rootView"
+			],
+			[
+				"thi",
+				"thisTermSchedule"
+			],
+			[
+				"this",
+				"thisTermSchedule"
+			],
+			[
+				"g",
+				"group"
+			],
+			[
+				"ter",
+				"termAvrages"
+			],
+			[
+				"tem",
+				"terms"
+			],
+			[
+				"term",
+				"termData"
+			],
+			[
+				"cu",
+				"currentAvrage"
+			],
+			[
+				"loa",
+				"loaded"
+			],
+			[
+				"Co",
+				"CourseFake"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"num",
+				"nums"
+			],
+			[
+				"cur",
+				"cur:m	cursor:move"
+			],
+			[
+				"scr",
+				"scrollElement"
+			],
+			[
+				"sc",
+				"scrollHeight"
+			],
+			[
+				"hol",
+				"holders"
+			],
+			[
+				"ho",
+				"holder"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"Cou",
+				"CourseHolder"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"no",
+				"noAnim"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"2",
+				"2c2c4e"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/xampp/htdocs/iran/scripts/coffee/Pages/Main.coffee",
+			"settings":
+			{
+				"buffer_size": 385,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/iran/scripts/coffee/Pages/NewEstate.coffee",
+			"settings":
+			{
+				"buffer_size": 873,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Pouria/Desktop/Python/battleships/setup",
+			"settings":
+			{
+				"buffer_size": 113,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/iran/scripts/coffee/Tools/Form.coffee",
+			"settings":
+			{
+				"buffer_size": 1067,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 78.0,
+		"selected_items":
+		[
+			[
+				"synphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"synjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synco",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"synsass",
+				"Set Syntax: Sass"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"syncss",
+				"Set Syntax: CSS"
+			],
+			[
+				"synhtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"sysass",
+				"Set Syntax: Sass"
+			],
+			[
+				"sync++",
+				"Set Syntax: C++"
+			],
+			[
+				"sync",
+				"Set Syntax: C"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"uper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"diff",
+				"Modific: Show diff"
+			],
+			[
+				"synh",
+				"Set Syntax: HTML"
+			],
+			[
+				"sht",
+				"Set Syntax: HTML"
+			],
+			[
+				"synhtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"case",
+				"Convert Case: Swap Case"
+			],
+			[
+				"clos",
+				"Project: Close"
+			],
+			[
+				"syncof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"coffe",
+				"Coffee: Run Script"
+			],
+			[
+				"stc#",
+				"Set Syntax: C#"
+			],
+			[
+				"sy",
+				"Set Syntax: C#"
+			],
+			[
+				"inc",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"incre",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"setsyc#",
+				"Set Syntax: C#"
+			],
+			[
+				"symat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"synma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"synmat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"setsynma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"setsync++",
+				"Set Syntax: C++"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 520.0
+	},
+	"console":
+	{
+		"height": 185.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Pouria/Desktop/Python/battleships/setup",
+		"/C/xampp/htdocs/iran/scripts/coffee/pg/1.coffee",
+		"/C/xampp/htdocs/iran/scripts/coffee/Tools/Form.coffee",
+		"/C/xampp/htdocs/iran/styles/sass/main.sass",
+		"/C/xampp/htdocs/iran/scripts/coffee/Pages/SearchBar.coffee",
+		"/C/xampp/htdocs/iran/scripts/coffee/Pages/Login.coffee",
+		"/C/xampp/htdocs/iran/pages/jade/index.jade",
+		"/C/xampp/htdocs/iran/scripts/coffee/Pages/Search.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/searchCollapser.coffee",
+		"/C/xampp/htdocs/iran/scripts/coffee/Pages/NewEstate.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/search-content.php",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/jqueryUIFuncs.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/new-estate.php",
+		"/C/xampp/htdocs/iran/scripts/coffee/Tools/Select.coffee",
+		"/C/xampp/htdocs/iran/scripts/coffee/Tools/Input.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/add-content.php",
+		"/C/Users/Pouria/Desktop/Python/test.py",
+		"/C/xampp/htdocs/iran/scripts/coffee/Tools/mjRadios.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/mjRadios.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/search-result.php",
+		"/C/xampp/htdocs/iranamlak/pages/search-query.php",
+		"/C/xampp/htdocs/iranamlak/pages/search.php",
+		"/D/host/next3days/Public/scripts/coffee/lib/Page.coffee",
+		"/D/host/next3days/Public/scripts/coffee/lib/contextmenu.coffee",
+		"/D/host/next3days/Public/scripts/coffee/lib/drag.coffee",
+		"/D/host/next3days/Public/scripts/coffee/lib/events.coffee",
+		"/D/host/next3days/Public/scripts/coffee/lib/PasteManager.coffee",
+		"/C/Users/Pouria/AppData/Local/NextVPN/Profiles/Default2.ppx",
+		"/C/Users/Pouria/AppData/Local/NextVPN/Profiles/Default.ppx",
+		"/C/xampp/htdocs/iranamlak/pages/login-pane.php",
+		"/C/xampp/htdocs/iran/styles/sass/imports/_footer.sass",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/loginCollapser.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/footerCollapser.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/menuSelector.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/user-menu.php",
+		"/C/xampp/htdocs/iranamlak/pages/login.php",
+		"/C/xampp/htdocs/iranamlak/pages/index.php",
+		"/C/xampp/htdocs/jik/scripts/coffee/Model/Model.coffee",
+		"/C/xampp/htdocs/iran/scripts/coffee/Pages/Main.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/HomePage.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/rightpane.php",
+		"/C/xampp/htdocs/iranamlak/pages/footer.php",
+		"/C/xampp/htdocs/iranamlak/pages/ads.php",
+		"/C/xampp/htdocs/iranamlak/pages/header.php",
+		"/C/Users/Pouria/Downloads/t-2/Styles.css",
+		"/C/Users/Pouria/Downloads/t-1/index.html",
+		"/C/xampp/htdocs/iran/.gitignore",
+		"/C/xampp/htdocs/iran/pages/compile.coffee",
+		"/C/xampp/htdocs/iran/package.json",
+		"/C/xampp/htdocs/iran/PAT.bat",
+		"/C/xampp/htdocs/iran/scripts/pg_watch.bat",
+		"/C/xampp/htdocs/_TavePlate/PAT.bat",
+		"/C/xampp/htdocs/_TavePlate/package.json",
+		"/C/xampp/htdocs/_TavePlate/scripts/curl.js",
+		"/C/xampp/htdocs/iranamlak/pages/insert-location.php",
+		"/C/xampp/htdocs/iranamlak/pages/ajaxResponse.php",
+		"/C/xampp/htdocs/iranamlak/pages/database/states.php",
+		"/C/xampp/htdocs/iranamlak/pages/add-location.php",
+		"/C/xampp/htdocs/iranamlak/pages/core/authentication.php",
+		"/C/xampp/htdocs/zfmy/public/index.php",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.585/reminder.blade.php",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.442/index.php",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/showWindow.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/slider.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/transitions.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/try.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/uriGetFetcher.coffee",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/lib/location.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/database/cities.php",
+		"/C/xampp/htdocs/iranamlak/pages/database/zone.php",
+		"/C/xampp/htdocs/iranamlak/pages/database/ajaxResponse.php",
+		"/D/Videos/social-game/scripts/coffee/pages/demo.coffee",
+		"/D/Videos/social-game/pages/server/reg.php",
+		"/C/xampp/htdocs/iranamlak/pages/database/states.coffee",
+		"/C/xampp/htdocs/iranamlak/pages/insert-estate.php",
+		"/D/Videos/social-game/pages/server/grab.php",
+		"/D/Videos/social-game/scripts/test/prepare.coffee",
+		"/C/xampp/htdocs/jik/README.md",
+		"/C/Users/Pouria/Downloads/t-1/Styles.css",
+		"/C/xampp/htdocs/iranamlak/scripts/coffee/pages/demo.coffee",
+		"/C/Users/Pouria/Downloads/t-1/Scripts.js",
+		"/C/xampp/htdocs/iranamlak/pages/ad-slider-submitter.php",
+		"/C/xampp/htdocs/iranamlak/pages/backstage/location-teller.php",
+		"/C/xampp/htdocs/iranamlak/pages/core/jdf.php",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.173/AndroidManifest.xml",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.603/classes.dex",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.682/resources.arsc",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.854/MANIFEST.MF",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.668/CERT.RSA",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.207/CERT.SF",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.095/MANIFEST.MF",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DRa0.304/assets/www/index.html",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.820/cordova.js",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.289/phonegap.js",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.488/config.xml",
+		"/C/xampp/htdocs/iranamlak/pages/ad-make-content.php",
+		"/C/xampp/htdocs/Jik/index.html",
+		"/C/xampp/htdocs/Jik/cache.manifest",
+		"/D/Work/WorkAchive/factor/cache.manifest",
+		"/D/Work/WorkAchive/factor/findor.coffee",
+		"/C/xampp/htdocs/Jik/.htaccess",
+		"/D/Work/WorkAchive/factor/pages/jade/fa.jade",
+		"/D/Work/WorkAchive/factor/pages/html/fa.html",
+		"/D/Work/WorkAchive/factor/.htaccess",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/C/xampp/htdocs/iranamlak/pages/post-data.php",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/MusicPlayer.coffee",
+		"/C/xampp/htdocs/jik/node_modules/pantomime/scripts/coffee/lib/Pantomime.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Ribbon/Ribbon.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Ribbon/Title.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Ribbon/RibbonPage.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Main.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Item.coffee",
+		"/C/xampp/htdocs/jik/node_modules/pantomime/scripts/coffee/lib/Touchy.coffee",
+		"/C/xampp/htdocs/jik/node_modules/pantomime/scripts/coffee/lib/touchy/TouchyEl.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/pg/1.coffee",
+		"/C/xampp/htdocs/jik/node_modules/pantomime/package.json",
+		"/C/xampp/htdocs/zfmy/vendor/ZF2/library/Zend/Authentication/Result.php",
+		"/C/xampp/htdocs/zfmy/vendor/ZF2/library/Zend/Authentication/README.md",
+		"/C/xampp/htdocs/zfmy/vendor/ZF2/library/Zend/Authentication/composer.json",
+		"/C/xampp/htdocs/zfmy/vendor/ZF2/library/Zend/Authentication/AuthenticationServiceInterface.php",
+		"/C/Users/Pouria/AppData/Local/Temp/Rar$DIa0.162/core.js",
+		"/C/xampp/htdocs/jik/index.html",
+		"/C/xampp/htdocs/jik/styles/sass/main.sass",
+		"/C/Users/Pouria/Desktop/1.html",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Item/VideoItem.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Item/SongItem.coffee",
+		"/C/xampp/htdocs/jik/scripts/coffee/View/Item/AlbumItem.coffee"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\xampp\\htdocs\\FoxieTest\\node_modules\\foxie\\scripts\\coffee",
+			"C:\\xampp\\htdocs\\open-source\\local\\theatrejs\\scripts\\coffee\\lib\\editorView",
+			"D:\\Documents\\UNI\\term7\\AI Project\\Project\\AI_NodeJS\\coffee"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" \"stext\"",
+			"t(",
+			"(new ",
+			"(",
+			"@form",
+			"method",
+			"add",
+			"newEstate",
+			"search",
+			"ptions",
+			"selects",
+			"select",
+			"Input",
+			"Form",
+			"submit",
+			"input",
+			"class",
+			"toggleTime",
+			"domRadios",
+			"->",
+			"selectedIndexes",
+			"uncheckMJRadio",
+			"Radios[index]",
+			"radios[index]",
+			"Radios[index]",
+			"radios[index]",
+			"pasio",
+			"shoofaj",
+			"room",
+			"price",
+			"sys",
+			"',",
+			"(",
+			"user.list",
+			"mini-search-btn",
+			"$('.search-content-tab')",
+			"Search",
+			"types",
+			"address[",
+			"address",
+			"..",
+			"data.",
+			"</div>",
+			"',",
+			"Login",
+			"updateLabes",
+			"appendChild",
+			"do @openMenu",
+			"=\"../",
+			" <li>",
+			" ",
+			" <?php if ",
+			"href=\"?panel",
+			"?panel=search",
+			"></script>",
+			"<script ",
+			"_id",
+			"state",
+			"state_result",
+			"zone_result",
+			"city_result",
+			"city",
+			"result",
+			"zone_result",
+			"pic1",
+			"uploadfile",
+			"_GET",
+			"uploaddir",
+			"\\",
+			"pages/html/fa",
+			"apple",
+			"7",
+			"57",
+			"57x57",
+			"57",
+			"factor-offline",
+			"href=\"",
+			"rel=\"",
+			"57x57",
+			"1024",
+			"Program Files (x86",
+			"Program Files (x86)\\Breakin Bad",
+			"\\",
+			"C:/xampp/htdocs",
+			"c:",
+			"_GET",
+			"stopPropagation",
+			"deal",
+			"queryGen",
+			"echo",
+			"->$",
+			"query",
+			"private",
+			"Pantomime",
+			"pantomim",
+			"Pantomim",
+			"Pantomime",
+			"pantomime",
+			"Pantomime",
+			"pantomime",
+			"Pantomime",
+			"pantomime",
+			"Pantomime",
+			"pantomime",
+			"Pantomime",
+			"pantomime",
+			"Pantomime",
+			";",
+			"touch",
+			"li",
+			"scroller",
+			"touch",
+			"pantomime",
+			"Pantomime",
+			"IScroll",
+			"iScroll",
+			"_scrollerX",
+			"SingleAxisScroller",
+			"_animFunction",
+			"requestAnimationFrame",
+			"object",
+			"webkit",
+			"sys",
+			"webkitCancelAnimationFrame",
+			"module",
+			"Pantomime.TouchyEl.get(this.el.node).on",
+			"Pantomime.TouchyEl.get(_this.el.node).on",
+			"Pantomime.TouchyEl.get(@el.node).on"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/iran/scripts/coffee/Pages/Main.coffee",
+					"settings":
+					{
+						"buffer_size": 385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/xampp/htdocs/iran/scripts/coffee/Pages/NewEstate.coffee",
+					"settings":
+					{
+						"buffer_size": 873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								676,
+								676
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Pouria/Desktop/Python/battleships/setup",
+					"settings":
+					{
+						"buffer_size": 113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/xampp/htdocs/iran/scripts/coffee/Tools/Form.coffee",
+					"settings":
+					{
+						"buffer_size": 1067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 158.0
+	},
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true
+}

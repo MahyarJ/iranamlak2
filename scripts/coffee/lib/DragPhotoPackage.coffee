@@ -1,0 +1,215 @@
+
+makeDropable = (packageEl, nextOne) =>
+
+	packageEl.children[0].innerText = 'تصویر را انتخاب کنید یا اینجا بیاندازید'
+
+	available = true
+
+	packageEl.children[1].addEventListener "change", (event) =>
+
+		packageEl.children[2].value = packageEl.children[1].value
+
+		return if packageEl.children[1].files.length is 0
+
+		readFile packageEl.children[1].files[0], packageEl
+
+		if nextOne?
+
+			$ nextOne
+			.fadeIn()
+
+		packageEl.classList.remove 'dropHere'
+
+		packageEl.children[0].innerText = 'در حال آپلود'
+
+
+	packageEl.addEventListener "drop", (event) =>
+
+		event.stopPropagation()
+		event.preventDefault()
+
+		files = event.dataTransfer.files
+
+		data = event.dataTransfer.getData("URL")
+
+		return if files.length is 0
+
+		readFile files[0], packageEl
+
+		if nextOne?
+
+			$ nextOne
+			.fadeIn()
+
+		packageEl.classList.remove 'dropHere'
+
+		packageEl.children[0].innerText = 'در حال آپلود'
+
+		return
+
+	packageEl.addEventListener "dragenter", (event) =>
+
+		event.stopImmediatePropagation()
+		event.preventDefault()
+
+		packageEl.classList.add 'dropHere'
+
+		packageEl.children[0].innerText = 'رها کنید'
+
+		return
+
+	packageEl.addEventListener "dragexit", (event) =>
+
+		event.stopImmediatePropagation()
+		event.preventDefault()
+
+		packageEl.classList.remove 'dropHere'
+
+		packageEl.children[0].innerText = 'اینجا بیاندازید'
+
+		return
+
+	packageEl.addEventListener "dragleave", (event) =>
+
+		event.stopImmediatePropagation()
+		event.preventDefault()
+
+		packageEl.classList.remove 'dropHere'
+
+		packageEl.children[0].innerText = 'اینجا بیاندازید'
+
+		return
+
+	packageEl.addEventListener "dragend", (event) =>
+
+		event.stopImmediatePropagation()
+		event.preventDefault()
+
+		packageEl.classList.remove 'dropHere'
+
+		packageEl.children[0].innerText = 'تصویر را انتخاب کنید یا اینجا بیاندازید'
+
+		return
+
+	packageEl.addEventListener "dragover", (event) =>
+
+		event.stopImmediatePropagation()
+		event.preventDefault()
+
+		packageEl.classList.add 'dropHere'
+
+		packageEl.children[0].innerText = 'رها کنید'
+
+		return
+
+readFile = (file, el) ->
+
+	reader = new FileReader
+
+	reader.readAsDataURL(file)
+
+	console.log 'Reading File...'
+
+	reader.onload = (evt) =>
+
+		data = evt.target.result
+
+		blob = dataURItoBlob data
+
+		fd = new FormData()
+
+		fd.append "image", blob, file.name
+
+		el.children[2].value = file.name
+
+		packageSendForm fd, data, file.name, el
+
+		return
+
+dataURItoBlob = (dataURI) ->
+
+	byteString = atob(dataURI.split(",")[1])
+
+	mimeString = dataURI.split(",")[0].split(":")[1].split(";")[0]
+
+	ab = new ArrayBuffer(byteString.length)
+	ia = new Uint8Array(ab)
+
+	i = 0
+
+	while i < byteString.length
+
+		ia[i] = byteString.charCodeAt(i)
+
+		i++
+
+
+	new Blob [ia]
+
+packageSendForm = (fd, data, name, el) =>
+
+
+
+	$.ajax
+
+		type: 'POST',
+		# 	type: "multipart",
+
+		url: '../pages/upload-image.php?name=' + name
+
+		# data: $('#file').attr('files'),
+		data: fd
+
+		cache: false,
+
+		# contentType: 'multipart/form-data',
+		contentType: false,
+
+		processData: false,
+
+
+	.done (data) ->
+
+		try
+
+			dataObj = JSON.parse data
+
+			if dataObj.url?
+
+				el.children[0].innerText = ''
+
+				if el.children[3]?
+
+					el.children[3].src = dataObj.url
+
+				else
+
+					img = document.createElement 'img'
+
+					img.classList.add 'hole-image'
+
+					img.src = dataObj.url
+
+					el.appendChild img
+
+
+		catch e
+
+			console.error e.toString(), data
+
+	.fail () ->
+
+		console.log "Checkout Ajax Failed!"
+
+
+all = document.querySelectorAll '.add-pic'
+
+makeDropable all[0], all[1]
+makeDropable all[1], all[2]
+makeDropable all[2]
+
+$ all[1]
+.fadeOut(0)
+
+$ all[2]
+.fadeOut(0)

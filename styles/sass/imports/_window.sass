@@ -1,0 +1,59 @@
+$titleColor: #E9541C
+
+.window
+
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	visibility: hidden
+	opacity: 0
+	@include transition(all .5s)
+
+
+	.bg
+
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: #000
+		opacity: .8
+
+
+.window-content-box
+
+	position: absolute
+	background-color: $titleColor
+	margin: 100px
+	padding: 30px
+	opacity: .8
+	color: #FFF
+	text-align: justify
+	@include border-radius(10px)
+
+	.window-close
+
+		position: absolute
+		background: url('../../files/images/close.png')
+		width: 16px
+		height: 16px
+		top: 5px
+		left: 5px
+		cursor: pointer
+		opacity: .7
+
+		&:hover
+
+			opacity: 1
+
+.window-content-box-ajax-load
+
+	position: relative
+
+
+.form
+
+	position: relative

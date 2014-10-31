@@ -1,0 +1,479 @@
+$mainColor: #EB2A10
+$green: #1F7507
+$mainColor01: #A0410D
+
+.item
+
+	position: relative
+	height: auto
+	min-height: 50px
+	width: 705px
+	margin-bottom: 15px
+	clear: both
+
+
+.search-content, .add-content
+
+	position: relative
+	padding: 10px 20px 30px 0
+
+
+	h1
+
+		position: relative
+		margin-top: 30px
+		font-size: 20px
+		color: $mainColor01
+
+	h2
+
+		position: relative
+		font-family: "Yekan"
+		text-align: justify
+		font-size: 18px
+		color: #000
+
+	label
+
+		position: relative
+		font-family: "Yekan"
+		font-size: 18px
+		color: #000
+
+	input
+
+		color: #000
+		font-family: "Yekan"
+		border: none
+		font-size: 18px
+
+	span.tag
+
+		position: absolute
+		color: #000
+		margin-right: -45px
+		font-size: 12px
+
+.search-content
+
+	background: url('../../files/images/searchbg.png')
+	height: 60px
+	overflow: hidden
+	@include transition(all .4s)
+
+
+	.search-content-tab
+
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 30px
+		width: 100px
+		line-height: 30px
+		color: #000
+		font-size: 12px
+		font-family: "Yekan"
+		text-align: center
+		background: url('../../files/images/searchbg.png')
+		cursor: pointer
+
+		&:hover
+
+			color: $mainColor
+
+
+
+select
+
+	font-family: "Yekan"
+	font-size: 18px
+	color: #000
+	width: 220px
+	height: 40px
+	border: none
+	border-radius: 4px
+	background-color: #DDD
+	cursor: pointer
+	margin: 10px 5px
+	padding-right: 5px
+	@include transition(all .4s)
+
+	&:hover
+
+		background-color: #AAA
+
+option
+
+	color: #000
+	background-color: #DDD
+	height: 40px
+	cursor: pointer
+
+.dom-radio
+
+	display: none
+
+
+.city-def
+
+	position: relative
+	line-height: 30px
+	vertical-align: middle
+	margin: 5px
+
+	#submit-search
+
+		position: absolute
+		left: 5px
+		top: 1px
+		bottom: 0
+		width: 130px
+		height: 30px
+		background: url(../../files/images/search_box_icon.png) #00A651 no-repeat center center
+		cursor: pointer
+		@include transition(all .4s)
+
+		&:hover
+
+			opacity: .8
+
+.estate-def
+
+	margin-top: 20px
+	padding: 0 10px
+
+	.range-field
+
+		background-color: transparent
+		margin-right: 50px
+		width: 400px
+		color: $mainColor01
+
+.options-def
+
+	position: relative
+
+.mj-radiogroup
+
+	position: relative
+	clear: both
+	margin-top: 5px
+	list-style: none
+	height: 50px
+	width: auto
+
+.mj-radio
+
+	position: relative
+	float: right
+	font-family: "Yekan"
+	padding: 5px 15px
+	color: #000
+	background-color: #CCC
+	border-radius: 4px
+	cursor: pointer
+	height: 30px
+	margin: 5px
+	overflow: hidden
+	@include transition(all .4s)
+
+	&:hover
+
+		background-color: #777
+		color: #FFF
+
+.selected
+
+	background-color: #EB2A10
+	color: #FFF
+
+	&:hover
+
+		background-color: lighten(#EB2A10, 10)
+		color: #FFF
+
+.numeric-up-down
+
+	position: relative
+	height: 30px
+	width: 90px
+	margin: 5px
+
+	.numeric-up
+
+		position: absolute
+		top: 0
+		left: 0
+		width: 30px
+		height: 15px
+		background: #CCC
+		color: #000
+		text-align: center
+		vertical-align: middle
+		font-family: "Yekan"
+		font-size: 16px
+		line-height: 16px
+		cursor: pointer
+		@include border-radius(4px 0 0 0)
+		@include transition(all .4s)
+
+		&:hover
+
+			background-color: #777
+			color: #FFF
+
+	.numeric-down
+
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 30px
+		height: 15px
+		background: #CCC
+		color: #000
+		text-align: center
+		vertical-align: middle
+		font-family: "Yekan"
+		font-size: 16px
+		line-height: 16px
+		cursor: pointer
+		@include border-radius(0 0 0 4px)
+		@include transition(all .4s)
+
+		&:hover
+
+			background-color: #777
+			color: #FFF
+
+	.numeric-field
+
+		position: absolute
+		bottom: 0
+		right: 0
+		top: 0
+		width: 60px
+		color: #000
+		height: 30px
+		background: #FFF
+		text-align: center
+		vertical-align: middle
+		font-family: "Yekan"
+		font-size: 32px
+		line-height: 22px
+		@include border-radius(0 4px 4px 0)
+
+
+	.numeric-field-real-text
+
+		text-align: left
+		width: 1px
+		color: #000
+
+.add-pic
+
+	position: relative
+	width: 200px
+	height: 150px
+	border: #888 dotted 2px
+	background: #DDD
+	margin-top: 20px
+	margin-bottom: 80px
+	margin-left: 18px
+	text-align: center
+	vertical-align: middle
+	cursor: pointer
+	float: right
+	@include transition(all .4s)
+
+	// &:after
+
+	// 	position: relative
+	// 	margin-right: auto
+	// 	margin-left: auto
+	// 	content: "+"
+	// 	line-height: 150px
+	// 	font-size: 50px
+	// 	font-weight: bold
+	// 	color: #999
+
+	&:hover
+
+		background: #AAA
+		border: #EEE dotted 2px
+
+		// &:after
+
+		// 	color: #EEE
+		// 	font-size: 26px
+		// 	content: "\062F \0631 \062C  \0639 \06A9 \0633"
+
+	img
+
+		height: 100%
+		width: 100%
+
+.dropHere
+
+	background: #AAA
+	border: #EEE dotted 2px
+	transform: scaleX(1.2) scaleY(1.2)
+
+// -------------------------------------------------------
+
+.result-item
+
+	position: relative
+	height: auto
+	margin: -5px
+
+.estate-item
+
+	position: relative
+	background: #AAA
+	margin-bottom: 5px
+	width: 780px
+	height: 40px
+	padding: 5px
+	top: 5px
+	right: 5px
+	cursor: pointer
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #BBB
+
+		.types .type-item
+
+			color: $mainColor
+
+	.date
+
+		background: $mainColor
+		height: 30px
+		width: 75px
+		padding: 5px 10px
+		font-family: 'Yekan'
+		text-align: center
+
+	.total-price
+
+		position: absolute
+		background: $mainColor
+		left: 5px
+		top: 5px
+		bottom: 5px
+		width: 120px
+		text-align: center
+		padding: 5px 10px
+		font-family: 'Yekan'
+		font-size: 18px
+
+	.area
+
+		position: absolute
+		background: $mainColor
+		left: 148px
+		top: 5px
+		width: 100px
+		font-family: 'Yekan'
+		font-size: 12px
+		text-align: center
+
+	.unit-price
+
+		position: absolute
+		background: $mainColor
+		left: 148px
+		bottom: 6px
+		width: 100px
+		font-family: 'Yekan'
+		font-size: 12px
+		text-align: center
+
+	.address
+
+		position: absolute
+		bottom: 5px
+		right: 110px
+
+		.address-item
+
+			color: #000
+			float: right
+			font-size: 16px
+			font-family: 'Yekan'
+			margin-left: 20px
+
+	.types
+
+		position: absolute
+		top: 3px
+		right: 110px
+
+		.type-item
+
+			font-size: 12px
+			font-family: 'Yekan'
+			float: right
+			margin-left: 20px
+			@include transition(color .4s)
+
+
+.item-submit
+
+	position: relative
+	color: #FFF
+	margin-top: 30px
+	height: 60px
+
+	.form-submit-btn
+
+		position: relative
+		background: $green
+		width: 650px
+		font-size: 24px
+		line-height: 24px
+		height: 60px
+		color: #FFF
+		cursor: pointer
+		@include border-radius(5px)
+		@include transition(all .4s)
+
+		&:hover
+
+			background: lighten($green, 10)
+
+.form-rename-btn
+
+	position: relative
+	display: inline-block
+	background: red
+	color: white !important
+	padding: 6px 0
+	cursor: pointer
+	width: 0
+	visibility: hidden
+	@include border-radius(5px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: lighten(red, 15)
+
+
+.mini-search-btn
+
+	position: absolute
+	left: 10px
+	top: 10px
+	background: url('../../files/images/search_box_icon.png') $green no-repeat center center
+	height: 40px
+	width: 50px
+	cursor: pointer
+	@include border-radius(5px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: url('../../files/images/search_box_icon.png') lighten($green, 10) no-repeat center center

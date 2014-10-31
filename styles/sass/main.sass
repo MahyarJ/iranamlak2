@@ -1,0 +1,80 @@
+@import "compass/utilities/general"
+@import "compass/css3"
+
+@import "imports/reset"
+@import "imports/footer"
+@import "imports/rightpane"
+@import "imports/header"
+@import "imports/adpane"
+@import "imports/widgets"
+@import "imports/add-location"
+@import "imports/slider"
+
+
+body
+
+	background: url(../../files/images/bg7.jpg) no-repeat center center fixed
+
+a
+
+	text-decoration: none
+	cursor: default
+
+
+.mid
+
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	width: 1280px
+	height: auto
+	margin-top: 100px
+	min-height: 1100px
+
+
+.main
+
+	position: relative
+	left: 0
+	top: 0
+	bottom: 0
+	right: 180px
+	width: 1100px
+	height: auto
+	padding-bottom: 80px
+
+	.bg
+
+		position: absolute
+		bottom: 0
+		top: 0
+		left: 0
+		right: 0
+		background-color: #FFF
+		height: auto
+		opacity: .9
+
+	.main-content
+
+		position: relative
+		top: 0
+		right: 0
+		left: 0
+		color: #000
+		// padding: 20px
+		width: 795px
+		height: auto
+		min-height: 1100px
+
+
+.text
+
+	background: #DDD
+	padding-right: 5px
+	height: 40px
+	@include border-radius(4px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #AAA

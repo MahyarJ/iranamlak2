@@ -1,0 +1,66 @@
+.add-location-item
+
+	clear: both
+	margin-bottom: 20px
+
+	select
+
+		position: relative
+		width: 600px
+
+.add-box
+
+	position: relative
+	width: 600px
+	margin: 5px 20px
+	overflow: hidden
+	display: none
+
+	.form-submit-btn
+
+		position: relative
+		background: $green
+		padding: 0 10px
+		margin-right: 10px
+		font-size: 14px
+		line-height: 14px
+		height: 40px
+		color: #FFF
+		cursor: pointer
+		@include border-radius(5px)
+		@include transition(all .4s)
+
+		&:hover
+
+			background: lighten($green, 10)
+
+	.text
+
+		width: 400px
+
+
+
+.add-location-collapser
+
+	position: relative
+	float: right
+	background: $green
+	margin: 10px
+	height: 40px
+	width: 40px
+	cursor: pointer
+	text-align: center
+	font-size: 18px
+	font-weight: bold
+	line-height: 42px
+	vertical-align: middle
+	@include border-radius(5px)
+	@include transition(all .6s)
+
+	&:hover
+
+		background: lighten($green, 10)
+
+.rotated
+
+	@include transform(rotateZ(180deg))

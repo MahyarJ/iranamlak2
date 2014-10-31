@@ -1,0 +1,95 @@
+$mainColor: #EB2A10
+
+.right-pane
+
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	width: 180px
+	height: auto
+
+	.bg
+
+		position: absolute
+		bottom: 0
+		top: 0
+		left: 0
+		right: 0
+		background-color: $mainColor
+		opacity: .85
+
+	.logo
+
+		position: relative
+		margin-top: -100px
+		margin-right: -10px
+		width: 220px
+		height: 155px
+		background: url(../../files/images/logo.png)
+
+.login-opener
+
+	position: relative
+	height: 60px
+	color: #FFF
+	line-height: 60px
+	padding: 8px 20px
+	background: lighten(#2a52b1, 5)
+	font-size: 18px
+	cursor: default
+	@include transition(all .4s)
+	@include box-shadow(2px 2px 8px 0px #333 inset)
+
+	&:hover
+
+		background: #2a52b1
+		color: lighten($mainColor, 10)
+		@include box-shadow(3px 3px 8px 1px #111 inset)
+
+	p
+
+		position: relative
+		line-height: 14px
+		font-size: 12px
+		padding: 0
+		margin: 8px 0
+
+		a
+
+			color: orange
+			text-decoration: underline
+			cursor: pointer
+
+ul.right-menu
+
+	position: absolute
+	list-style: none
+	top: 140px
+	width: 180px
+
+	li
+
+		padding: 10px 15px
+		height: 30px
+		vertical-align: middle
+		cursor: default
+		@include transition(all .4s)
+
+		&:hover
+
+			background: lighten($mainColor, 10)
+
+	.selected
+
+		background: #FFF
+		color: #000
+
+		&:hover
+
+			background: #FFF
+
+
+
+
+

@@ -1,0 +1,79 @@
+// $mainColor: #A0410D
+$mainColor: #2a52b1
+
+.header
+
+	position: absolute
+	left: 0
+	right: 0
+	top: 20px
+	height: 80px
+	@include box-shadow(2px 5px 8px 4px #000 inset)
+
+	.bg
+
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-color: $mainColor
+		opacity: .85
+
+
+.top-menu-bar
+
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	width: 1280px
+
+ul.top-menu
+
+	position: relative
+	list-style: none
+	height: 80px
+	width: 1000px
+	margin-right: 220px
+
+	li
+
+		position: relative
+		float: right
+		padding: 0 20px
+		line-height: 90px
+		height: 80px
+		cursor: default
+		@include transition(all .4s)
+
+		&:hover
+
+			background: lighten($mainColor, 20)
+
+	.selected
+
+		background: #FFF
+		color: #000
+		cursor: default
+
+		&:hover
+
+			background: #FFF
+
+
+.oca
+
+	margin-right: 50px
+
+	&:after
+
+		position: absolute
+		background: url(../../files/images/ribbon.png)
+		width: 33px
+		height: 100px
+		left: -12px
+		top: -5px
+		content: "\0020"
+		z-index: 2
+
+

@@ -1,0 +1,104 @@
+$green: #1F7507
+$priceColor: #A0410D
+
+.slider-pg
+
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	overflow: hidden
+	width: 750px
+	height: 700px
+
+	.btn
+
+		position: absolute
+		border-radius: 5px
+		background: $green
+		color: #FFF
+		width: 180px
+		height: 35px
+		font-weight: bold
+		text-align: center
+		cursor: pointer
+		padding: 5px
+		@include transition(all .4s)
+
+		&:hover
+
+			background: lighten($green, 10)
+
+	.next
+
+		left: 180px
+		bottom: 30px
+
+	.prev
+
+		right: 180px
+		bottom: 30px
+		opacity: 0
+
+.slider
+
+	position: absolute
+	width: 750px
+	height: 700px
+	left: 0
+	top: 0
+	@include transition(all .4s)
+
+.slide
+
+	position: absolute
+	width: 750px
+	height: 700px
+	top: 0
+	left: 0
+	color: #000
+
+
+	.mj-radio
+
+		position: relative
+		margin-right: auto
+		margin-left: auto
+		float: none
+		text-align: center
+		font-size: 24px
+		margin-top: 20px
+		padding: 20px 0
+		height: 40px
+		width: 70%
+
+.price-board
+
+	position: absolute
+	top: 0
+	left: 0
+	width: 120px
+	height: 40px
+	color: white
+	padding: 5px 30px
+	font-size: 24px
+	text-align: center
+	font-family: 'Yekan'
+	background: $green
+	@include border-radius(0 0 5px 5px)
+
+.expander-content
+
+	position: relative
+	text-align: center
+	margin-top: 40px
+	font-size: 16px
+	color: #FFF
+
+	div
+
+		position: relative
+		margin-right: auto
+		margin-left: auto
+
+
+
