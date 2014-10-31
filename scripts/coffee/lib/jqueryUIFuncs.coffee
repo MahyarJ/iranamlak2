@@ -51,10 +51,13 @@ $(document).ready ->
 
 			$("#price-range-field").val( ui.values[ 1 ] + " میلیون تومان    ــــــ    " + ui.values[ 0 ] + " میلیون تومان" )
 
+			$("#price-range").val( "[" + ui.values[ 0 ] + ", " + ui.values[ 1 ] + "]" )
+
 	$("#price-slider-range").slider priceRangeParams
 
 	$("#price-range-field").val( $( "#price-slider-range" ).slider( "values", 1 ) + " میلیون تومان    ــــــ    " + $( "#price-slider-range" ).slider( "values", 0 ) + " میلیون تومان" )
 
+	$("#price-range").val( "[" + priceRangeParams.values[ 0 ] + ", " + priceRangeParams.values[ 1 ] + "]" )
 
 
 	areaRangeParams =
@@ -68,9 +71,13 @@ $(document).ready ->
 
 			$("#area-range-field").val( ui.values[ 1 ] + " متر مربع    ــــــ    " + ui.values[ 0 ] + " متر مربع" )
 
+			$("#area-range").val( "[" + ui.values[ 0 ] + ", " + ui.values[ 1 ] + "]" )
+
 	$("#area-slider-range").slider areaRangeParams
 
 	$("#area-range-field").val( $( "#area-slider-range" ).slider( "values", 1 ) + " متر مربع    ــــــ    " + $( "#area-slider-range" ).slider( "values", 0 ) + " متر مربع" )
+
+	$("#area-range").val( "[" + areaRangeParams.values[ 0 ] + ", " + areaRangeParams.values[ 1 ] + "]" )
 
 
 	roomRangeParams =
@@ -84,10 +91,13 @@ $(document).ready ->
 
 			$("#room-range-field").val( ui.values[ 1 ] + " خوابه    ــــــ    " + ui.values[ 0 ] + " خوابه" )
 
+			$("#room-range").val( "[" + ui.values[ 0 ] + ", " + ui.values[ 1 ] + "]" )
+
 	$("#room-slider-range").slider roomRangeParams
 
 	$("#room-range-field").val( $( "#room-slider-range" ).slider( "values", 1 ) + " خوابه    ــــــ    " + $( "#room-slider-range" ).slider( "values", 0 ) + " خوابه" )
 
+	$("#room-range").val( "[" + roomRangeParams.values[ 0 ] + ", " + roomRangeParams.values[ 1 ] + "]" )
 
 
 	ageRangeParams =
@@ -101,10 +111,13 @@ $(document).ready ->
 
 			$("#age-range-field").val( ui.values[ 1 ] + " ساله    ــــــ    " + ui.values[ 0 ] + " ساله" )
 
+			$("#age-range").val( "[" + ui.values[ 0 ] + ", " + ui.values[ 1 ] + "]" )
+
 	$("#age-slider-range").slider ageRangeParams
 
 	$("#age-range-field").val( $( "#age-slider-range" ).slider( "values", 1 ) + " ساله    ــــــ    " + $( "#age-slider-range" ).slider( "values", 0 ) + " ساله" )
 
+	$("#age-range").val( "[" + ageRangeParams.values[ 0 ] + ", " + ageRangeParams.values[ 1 ] + "]" )
 
 	# sliders parameters
 

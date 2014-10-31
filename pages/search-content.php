@@ -110,6 +110,8 @@
 
 				<input class="range-field" type="text" id="price-range-field">
 
+				<input class="range-field" type="hidden" id="price-range" name="price-range">
+
 				<div id="price-slider-range"></div>
 
 			</div>
@@ -119,6 +121,8 @@
 				<label for="area-range-field">محدوده مساحت: </label>
 
 				<input class="range-field" type="text" id="area-range-field">
+
+				<input class="range-field" type="hidden" id="area-range" name="area-range">
 
 				<div id="area-slider-range"></div>
 
@@ -130,6 +134,8 @@
 
 				<input class="range-field" type="text" id="room-range-field">
 
+				<input class="range-field" type="hidden" id="room-range" name="room-range">
+
 				<div id="room-slider-range"></div>
 
 			</div>
@@ -139,6 +145,8 @@
 				<label for="age-range-field">سن بنــا: </label>
 
 				<input class="range-field" type="text" id="age-range-field">
+
+				<input class="range-field" type="hidden" id="age-range" name="age-range">
 
 				<div id="age-slider-range"></div>
 
@@ -180,7 +188,7 @@
 
 				<ul class="mj-radiogroup">
 
-					<li data-radio="labi" class="mj-radio">لابی</li>
+					<li class="mj-radio"><input class="dom-radio" name="labi" type="radio">لابی</li>
 
 					<li class="mj-radio"><input class="dom-radio" name="hayat" type="radio">حیاط</li>
 
