@@ -4,14 +4,6 @@
 
 	$state_result = doquery($query);
 
-	// $query = "SELECT * FROM `cities`";
-
-	// $city_result = doquery($query);
-
-	// $query = "SELECT * FROM `zones`";
-
-	// $zone_result = doquery($query);
-
 ?>
 
 <div class="add-content">
@@ -21,9 +13,9 @@
 
 		<div class="add-location-item" id="state">
 
-			<select class="location-select" name="state" id="state-combobox">
+			<select class="location-select" id="state-combobox">
 
-				<option value="0">-- استان را انتخاب نمایید --</option>
+				<option value="none">-- استان را انتخاب نمایید --</option>
 
 				<?php
 
@@ -55,11 +47,13 @@
 
 		</div>
 
+
+
 		<div class="add-location-item" id="city">
 
 			<select class="location-select" name="city" id="city-combobox">
 
-				<option value="0">-- شهر را انتخاب نمایید --</option>
+				<option value="none">-- شهر را انتخاب نمایید --</option>
 
 			</select>
 
@@ -75,11 +69,13 @@
 
 		</div>
 
+
+
 		<div class="add-location-item" id="zone">
 
 			<select class="location-select" name="zone" id="zone-combobox">
 
-				<option value="0">-- منطقه را انتخاب نمایید --</option>
+				<option value="none">-- منطقه را انتخاب نمایید --</option>
 
 
 			</select>
@@ -98,3 +94,5 @@
 
 
 </div>
+
+<script src="../scripts/js/lib/location-manage.js"></script>
