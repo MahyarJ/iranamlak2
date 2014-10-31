@@ -20,11 +20,15 @@
 
 		position: relative
 		background: $green
+		float: left
 		padding: 0 10px
 		margin-right: 10px
 		font-size: 14px
-		line-height: 14px
+		line-height: 40px
+		width: 80px
 		height: 40px
+		vertical-align: middle
+		text-align: center
 		color: #FFF
 		cursor: pointer
 		@include border-radius(5px)
@@ -64,3 +68,13 @@
 .rotated
 
 	@include transform(rotateZ(180deg))
+
+.goforedit
+
+	background: orange
+	color: orange
+
+	&:hover
+
+		background: lighten(orange, 20) !important
+		color: lighten(orange, 20) !important

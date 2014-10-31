@@ -4,13 +4,13 @@
 
 	$state_result = doquery($query);
 
-	$query = "SELECT * FROM `cities`";
+	// $query = "SELECT * FROM `cities`";
 
-	$city_result = doquery($query);
+	// $city_result = doquery($query);
 
-	$query = "SELECT * FROM `zones`";
+	// $query = "SELECT * FROM `zones`";
 
-	$zone_result = doquery($query);
+	// $zone_result = doquery($query);
 
 ?>
 
@@ -18,13 +18,12 @@
 
 	<h1>افزودن موقعیت مکانی:</h1>
 
-	<form action="insert-location.php" method="get">
 
-		<div class="add-location-item">
+		<div class="add-location-item" id="state">
 
-			<select class="location-select" name="state">
+			<select class="location-select" name="state" id="state-combobox">
 
-				<option value="def">-- استان را انتخاب نمایید --</option>
+				<option value="0">-- استان را انتخاب نمایید --</option>
 
 				<?php
 
@@ -44,116 +43,58 @@
 
 			</select>
 
-			<div class="form-rename-btn" id="rename-state">ویرایش</div>
-
 			<div class="add-location-collapser">+</div>
 
 			<div class="add-box">
 
-				<input type="text" class="text" name="added-state-name">
+				<input type="text" class="text" id="added-state-name">
 
-				<input type="submit" class="form-submit-btn" name="submit-state" value="درج استان">
+				<div class="form-submit-btn" id="insert-state-submit">ثبت استان</div>
 
 			</div>
 
 		</div>
 
-		<div class="add-location-item">
+		<div class="add-location-item" id="city">
 
-			<select class="location-select" name="city">
+			<select class="location-select" name="city" id="city-combobox">
 
-				<option value="def">-- شهر را انتخاب نمایید --</option>
+				<option value="0">-- شهر را انتخاب نمایید --</option>
 
+			</select>
 
+			<div class="add-location-collapser">+</div>
 
-				<?php
+			<div class="add-box">
 
-					if ($city_result){
+				<input type="text" class="text" id="added-city-name">
 
-						for ($i = 0; $i < mysqli_num_rows($city_result); $i++){
+				<div class="form-submit-btn" id="insert-city-submit">ثبت شهر</div>
 
-							$city_resultArray = fetch($city_result);
+			</div>
 
-							echo "<option value=\"" . $city_resultArray['id'] . "\">" . $city_resultArray['name'] . "</option>";
+		</div>
 
-						}
-					}
+		<div class="add-location-item" id="zone">
 
-					// if (rows($city_resultArray_result) > 0)
-					// {
+			<select class="location-select" name="zone" id="zone-combobox">
 
-					// 	$city = fetch($city_result);
-
-					// 	echo "<option value=\"" . $city['id'] . "\">" . $city['name'] . "</option>";
-
-					// }
-
-				?>
+				<option value="0">-- منطقه را انتخاب نمایید --</option>
 
 
 			</select>
 
-			<div class="form-rename-btn" id="rename-city" >ویرایش</div>
-
 			<div class="add-location-collapser">+</div>
 
 			<div class="add-box">
 
-				<input type="text" class="text" name="added-city-name">
+				<input type="text" class="text" id="added-zone-name">
 
-				<input type="submit" class="form-submit-btn" name="submit-city" value="درج شهر">
+				<div class="form-submit-btn" id="insert-zone-submit">ثبت منطقه</div>
 
 			</div>
 
 		</div>
 
-		<div class="add-location-item">
-
-			<select class="location-select" name="zone">
-
-				<option value="def">-- منطقه را انتخاب نمایید --</option>
-
-				<?php
-
-					if ($zone_result){
-
-						for ($i = 0; $i < mysqli_num_rows($zone_result); $i++){
-
-							$zone_resultArray = fetch($zone_result);
-
-							echo "<option value=\"" . $zone_resultArray['id'] . "\">" . $zone_resultArray['name'] . "</option>";
-
-						}
-					}
-
-					// if (rows($zone_result) > 0)
-					// {
-
-					// 	$zone = fetch($zone_result);
-
-					// 	echo "<option value=\"" . $zone['id'] . "\">" . $zone['name'] . "</option>";
-
-					// }
-
-				?>
-
-
-			</select>
-
-			<div class="form-rename-btn" id="rename-zone" >ویرایش</div>
-
-			<div class="add-location-collapser">+</div>
-
-			<div class="add-box">
-
-				<input type="text" class="text" name="added-zone-name">
-
-				<input type="submit" class="form-submit-btn" name="submit-zone" value="درج منطقه">
-
-			</div>
-
-		</div>
-
-	</form>
 
 </div>
