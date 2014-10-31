@@ -4,27 +4,21 @@
 
 	$state_result = doquery($query);
 
-	$query = "SELECT * FROM `cities`";
-
-	$city_result = doquery($query);
-
-	$query = "SELECT * FROM `zones`";
-
-	$zone_result = doquery($query);
-
 ?>
 
 <div class="add-content">
 
-<form name="addnew" method="post" enctype="multipart/form-data" action="new-estate.php" accept-charset="UTF-8">
+	<div class="location-def">
 
-	<div class="city-def">
+		<h2>موقعبت جغرافیایی: </h2>
 
-		<select name="state">
+		<div class="add-location-item" id="state">
 
-			<option value="def">-- استان را انتخاب نمایید --</option>
+			<select class="location-select" id="state-combobox">
 
-			<?php
+				<option value="none">-- همه استانها --</option>
+
+				<?php
 
 					if ($state_result){
 
@@ -40,59 +34,46 @@
 
 				?>
 
-		</select>
+			</select>
 
-		<select name="city">
-
-			<option value="def">-- شهر را انتخاب نمایید --</option>
-
-			<?php
-
-					if ($city_result){
-
-						for ($i = 0; $i < mysqli_num_rows($city_result); $i++){
-
-							$city_resultArray = fetch($city_result);
-
-							echo "<option value=\"" . $city_resultArray['id'] . "\">" . $city_resultArray['name'] . "</option>";
-
-						}
-					}
-
-			?>
+		</div>
 
 
-		</select>
 
-		<select name="zone">
+		<div class="add-location-item" id="city">
 
-			<option value="def">-- منطقه را انتخاب نمایید --</option>
+			<select class="location-select" name="city" id="city-combobox">
 
-			<?php
+				<option value="none">-- همه شهرها --</option>
 
-					if ($zone_result){
+			</select>
 
-						for ($i = 0; $i < mysqli_num_rows($zone_result); $i++){
 
-							$zone_resultArray = fetch($zone_result);
+		</div>
 
-							echo "<option value=\"" . $zone_resultArray['id'] . "\">" . $zone_resultArray['name'] . "</option>";
 
-						}
-					}
 
-			?>
+		<div class="add-location-item" id="zone">
 
-		</select>
+			<select class="location-select" name="zone" id="zone-combobox">
+
+				<option value="none">-- همه مناطق --</option>
+
+
+			</select>
+
+		</div>
 
 
 		<div class="item">
 
-			<label>آدرس: </label>
+			<h2>آدرس: </h2>
 
 			<input style="width: 635px" name="address" class="text" type="text">
 
 		</div>
+
+		<p style="color: red">........................................................................................................................................</p>
 
 		<select name="estate-type" style="width: 340px" id="estate-kind">
 
@@ -412,3 +393,5 @@
 </form>
 
 </div>
+
+<script src="../scripts/js/lib/location-loader.js"></script>
