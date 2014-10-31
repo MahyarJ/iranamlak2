@@ -36,6 +36,9 @@
 
 	<?php require_once 'header.php' ?>
 
+
+
+
 	<!-- middle of the page -->
 
 	<div class="mid">
@@ -43,6 +46,7 @@
 		<div class="main">
 
 			<div class="bg"></div>
+
 
 			<!-- Main content of website shows here by needs -->
 
@@ -108,6 +112,7 @@
 
 	</div>
 
+
 	<!-- footer and user part of page -->
 
 	<?php include_once 'footer.php' ?>
@@ -131,10 +136,7 @@
 
 <script src="../scripts/js/lib/slider.js"></script>
 
-<script src="../scripts/js/lib/location.js"></script>
 
 <script src="../scripts/js/lib/DragPhotoPackage.js"></script>
-
-<!-- <script src="../scripts/js/lib/showWindow.js"></script> -->
 
 </html>
