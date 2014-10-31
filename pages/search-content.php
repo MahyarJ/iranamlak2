@@ -124,7 +124,7 @@
 
 			</div>
 
-			<div class="item" not-support-estate="[2,5,6,7,8,9]">
+			<div class="item" data-not-support-estate="[2,5,6,7,8,9]">
 
 				<label for="room-range-field">تعداد اتاقها: </label>
 
@@ -134,7 +134,7 @@
 
 			</div>
 
-			<div class="item" not-support-estate="[2,8,9]">
+			<div class="item" data-not-support-estate="[2,8,9]">
 
 				<label for="age-range-field">سن بنــا: </label>
 
@@ -150,7 +150,7 @@
 
 		<div class="options-def">
 
-			<div class="item" not-support-estate="[2,8]">
+			<div class="item" data-not-support-estate="[2,8]">
 
 				<h2>امکانات گرمایشی / سرمایشی: </h2>
 
@@ -174,7 +174,7 @@
 
 			</div>
 
-			<div class="item" not-support-estate="[2,8]">
+			<div class="item" data-not-support-estate="[2,8]">
 
 				<h2>فضاهای موجود: </h2>
 
@@ -200,25 +200,33 @@
 
 			</div>
 
-			<div class="item" not-support-estate="[2,6,8,9]">
+			<div class="item" data-not-support-estate="[2,6,8,9]">
 
-				<h2>امکانات رفاهی: </h2>
+				<h2>امکانات: </h2>
 
 				<ul class="mj-radiogroup">
 
-					<li class="mj-radio" not-support-estate="[4]"><input class="dom-radio" name="open" type="radio">آشپزخانه اوپن</li>
+					<li class="mj-radio" data-not-support-estate="[4]"><input class="dom-radio" name="open" type="radio">آشپزخانه اوپن</li>
 
-					<li class="mj-radio" not-support-estate="[5]"><input class="dom-radio" name="asansor" type="radio">آسانسور</li>
+					<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="asansor" type="radio">آسانسور</li>
 
-					<li class="mj-radio" not-support-estate="[5]"><input class="dom-radio" name="mostakhdem" type="radio">مستخدم</li>
+					<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="mostakhdem" type="radio">مستخدم</li>
 
 					<li class="mj-radio"><input class="dom-radio" name="seraydar" type="radio">سرایدار</li>
 
-					<li class="mj-radio" not-support-estate="[4,5]"><input class="dom-radio" name="estakhr" type="radio">استخر</li>
+					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="estakhr" type="radio">استخر</li>
 
-					<li class="mj-radio" not-support-estate="[4,5]"><input class="dom-radio" name="sona" type="radio">سونا</li>
+					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="sona" type="radio">سونا</li>
 
-					<li class="mj-radio" not-support-estate="[4,5]"><input class="dom-radio" name="jakoozi" type="radio">جکوزی</li>
+					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="jakoozi" type="radio">جکوزی</li>
+
+					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="donabsh" type="radio">دو نبش</li>
+
+					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="barmeidan" type="radio">بر میدان</li>
+
+					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelkuche" type="radio">داخل کوچه</li>
+
+					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelpasaj" type="radio">داخل پاساژ</li>
 
 				</ul>
 

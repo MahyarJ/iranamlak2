@@ -55,9 +55,9 @@ function getUrlParameter(sParam)
 }
 `
 
-for div in $('[not-support-estate]')
+for div in $('[data-not-support-estate]')
 
-	notSupportEstate = JSON.parse div.getAttribute 'not-support-estate'
+	notSupportEstate = JSON.parse div.getAttribute 'data-not-support-estate'
 
 	for notSupport in notSupportEstate
 
