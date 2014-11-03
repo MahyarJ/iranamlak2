@@ -25,7 +25,7 @@
 			<a href="?panel=search&amp;deal=3&amp;estate=<?php echo $estate; ?>"><li <?php if (isset($_GET['deal']) && ($_GET['deal'] == 3) ) echo "class=\"selected\"" ?> >پیش فروش</li></a>
 			<a href="?panel=search&amp;deal=4&amp;estate=<?php echo $estate; ?>"><li <?php if (isset($_GET['deal']) && ($_GET['deal'] == 4) ) echo "class=\"selected\"" ?> >مشارکت</li></a>
 			<a href="?panel=search&amp;deal=5&amp;estate=<?php echo $estate; ?>"><li <?php if (isset($_GET['deal']) && ($_GET['deal'] == 5) ) echo "class=\"selected\"" ?> >معاوضه</li></a>
-			<a href="?panel=search&amp;deal=6&amp;estate=<?php echo $estate; ?>"><li class="oca">اکـــازیون / فروش فوری</li></a>
+			<!-- <a href="?panel=search&amp;deal=6&amp;estate="><li class="oca">اکـــازیون / فروش فوری</li></a> -->
 
 		</ul>
 

@@ -10,7 +10,7 @@
 
 	<div class="location-def">
 
-		<h2>موقعبت جغرافیایی: </h2>
+		<h2>موقعیت جغرافیایی: </h2>
 
 		<div class="add-location-item" id="state">
 
@@ -36,24 +36,11 @@
 
 			</select>
 
-		</div>
-
-
-
-		<div class="add-location-item" id="city">
-
 			<select class="location-select" name="city" id="city-combobox">
 
 				<option value="none">-- همه شهرها --</option>
 
 			</select>
-
-
-		</div>
-
-
-
-		<div class="add-location-item" id="zone">
 
 			<select class="location-select" name="zone" id="zone-combobox">
 
@@ -62,18 +49,15 @@
 
 			</select>
 
+			<div class="item">
+
+				<h2>آدرس: </h2>
+
+				<input style="width: 635px" name="address" class="text" type="text">
+
+			</div>
+
 		</div>
-
-
-		<div class="item">
-
-			<h2>آدرس: </h2>
-
-			<input style="width: 635px" name="address" class="text" type="text">
-
-		</div>
-
-		<p style="color: red">........................................................................................................................................</p>
 
 		<select name="estate-type" style="width: 340px" id="estate-kind">
 
@@ -350,7 +334,7 @@
 
 			<h2>تصاویر ملک:</h2>
 
-			<div class="add-pic" onclick="document.addnew.browse01.click();">
+			<div class="add-pic">
 
 				<div class="text-nothin"></div>
 
@@ -360,7 +344,7 @@
 
 			</div>
 
-			<div class="add-pic" onclick="document.addnew.browse02.click();">
+			<div class="add-pic">
 
 				<div class="text-nothin"></div>
 
@@ -370,7 +354,7 @@
 
 			</div>
 
-			<div class="add-pic" onclick="document.addnew.browse03.click();">
+			<div class="add-pic">
 
 				<div class="text-nothin"></div>
 
@@ -395,3 +379,5 @@
 </div>
 
 <script src="../scripts/js/lib/location-loader.js"></script>
+
+<script src="../scripts/js/lib/DragPhotoPackage.js"></script>

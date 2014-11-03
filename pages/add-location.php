@@ -11,7 +11,7 @@
 	<h1>افزودن موقعیت مکانی:</h1>
 
 
-		<div class="add-location-item" id="state">
+		<div class="add-location-item manage" id="state">
 
 			<select class="location-select" id="state-combobox">
 
@@ -49,7 +49,7 @@
 
 
 
-		<div class="add-location-item" id="city">
+		<div class="add-location-item manage" id="city">
 
 			<select class="location-select" name="city" id="city-combobox">
 
@@ -71,7 +71,7 @@
 
 
 
-		<div class="add-location-item" id="zone">
+		<div class="add-location-item manage" id="zone">
 
 			<select class="location-select" name="zone" id="zone-combobox">
 

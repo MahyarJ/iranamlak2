@@ -13,9 +13,9 @@ selectedZone  = 0
 type = ''
 
 
-$('.add-location-item#city').fadeOut("fast")
+$('#city-combobox').fadeOut("fast")
 
-$('.add-location-item#zone').fadeOut("fast")
+$('#zone-combobox').fadeOut("fast")
 
 
 
@@ -27,13 +27,14 @@ stateCombobox.addEventListener 'change', =>
 
 	unless selectedState is "none"
 
-		$('.add-location-item#city').fadeIn("slow")
+		$('#city-combobox').fadeIn("slow")
 
 	else
 
-		$('.add-location-item#zone').fadeOut("slow")
+		$('#city-combobox').fadeOut("slow")
 
-		$('.add-location-item#city').fadeOut("slow")
+		$('#zone-combobox').fadeOut("slow")
+
 
 
 	$.ajax
@@ -66,20 +67,11 @@ cityCombobox.addEventListener 'change', =>
 
 	unless selectedCity is "none"
 
-		$('.add-location-item#zone').fadeIn("slow")
-
-		# cityCombobox.parentNode.querySelector('.add-location-collapser').classList.add('goforedit')
-
-		# $('#added-city-name').val(cityCombobox.selectedOptions[0].innerHTML)
+		$('#zone-combobox').fadeIn("slow")
 
 	else
 
-		$('.add-location-item#zone').fadeOut("slow")
-
-		# cityCombobox.parentNode.querySelector('.add-location-collapser').classList.remove('goforedit')
-
-		# zoneCombobox.parentNode.querySelector('.add-location-collapser').classList.remove('goforedit')
-
+		$('#zone-combobox').fadeOut("slow")
 
 	$.ajax
 

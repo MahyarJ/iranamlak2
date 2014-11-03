@@ -6,7 +6,7 @@
 
 		<div class="window-content-box-ajax-load"></div>
 
-		<div class="window-close"></div>
+		<div class="window-close">بازگشت »</div>
 
 	</div>
 
