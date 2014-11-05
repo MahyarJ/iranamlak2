@@ -34,7 +34,7 @@
 
 			<!-- <div class="mini-search-btn"></div> -->
 
-			<select name="state" >
+			<select id="state-combobox" >
 
 				<option value="none">-- همه استانها --</option>
 
@@ -56,7 +56,7 @@
 
 			</select>
 
-			<select name="city">
+			<select id="city-combobox">
 
 				<option value="none">-- همه شهرها --</option>
 
@@ -77,7 +77,7 @@
 
 			</select>
 
-			<select name="part">
+			<select id="zone-combobox">
 
 				<option value="none">-- همه مناطق --</option>
 
@@ -253,3 +253,5 @@
 	<div class="search-content-tab">جستجوی پیشرفته</div>
 
 </div>
+
+<script src="../scripts/js/lib/location-loader.js"></script>

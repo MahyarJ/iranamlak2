@@ -117,6 +117,7 @@
 
 	<?php include_once 'footer.php' ?>
 
+	<?php include_once 'window.php'; ?>
 
 </body>
 
@@ -136,7 +137,7 @@
 
 <script src="../scripts/js/lib/slider.js"></script>
 
+<script src="../scripts/js/lib/showWindow.js"></script>
 
-<script src="../scripts/js/lib/DragPhotoPackage.js"></script>
 
 </html>

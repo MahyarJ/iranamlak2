@@ -1,12 +1,15 @@
+$mainColor: #EB2A10
+
 $titleColor: #E9541C
 
 .window
 
-	position: absolute
+	position: fixed
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
+	z-index: 10
 	visibility: hidden
 	opacity: 0
 	@include transition(all .5s)
@@ -25,29 +28,39 @@ $titleColor: #E9541C
 
 .window-content-box
 
-	position: absolute
-	background-color: $titleColor
-	margin: 100px
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	background-color: white
+	border-right: 25px $mainColor solid
+	top: 70px
 	padding: 30px
-	opacity: .8
+	opacity: 1
+	width: 850px
+	height: 500px
 	color: #FFF
+	overflow: hidden
 	text-align: justify
-	@include border-radius(10px)
+	@include border-radius(0 5px 5px 5px)
 
 	.window-close
 
 		position: absolute
-		background: url('../../files/images/close.png')
-		width: 16px
-		height: 16px
-		top: 5px
-		left: 5px
+		background: $mainColor
+		width: 90px
+		height: 50px
+		top: 0
+		left: 0
+		line-height: 70px
+		padding-right: 10px
 		cursor: pointer
-		opacity: .7
+		@include border-radius(0 0 5px 0)
+		@include transform(translateY(-10px))
+		@include transition (all .4s)
 
 		&:hover
 
-			opacity: 1
+			@include transform(translateY(0))
 
 .window-content-box-ajax-load
 
