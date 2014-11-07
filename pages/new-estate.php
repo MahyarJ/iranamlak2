@@ -58,6 +58,11 @@
 			$checkboxGroup[21] = getValue('sona') == 'on' ? '1' : '0';
 			$checkboxGroup[22] = getValue('jakoozi') == 'on' ? '1' : '0';
 
+			$checkboxGroup[23] = getValue('donabsh') == 'on' ? '1' : '0';
+			$checkboxGroup[24] = getValue('barmeidan') == 'on' ? '1' : '0';
+			$checkboxGroup[25] = getValue('dakhelkuche') == 'on' ? '1' : '0';
+			$checkboxGroup[26] = getValue('dakhelpasaj') == 'on' ? '1' : '0';
+
 			$newEstateQuery = new NewEstateQuery('estate');
 
 			if ($state){

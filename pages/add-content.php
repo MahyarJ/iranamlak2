@@ -87,7 +87,7 @@
 
 		</select>
 
-		<div class="item">
+		<div class="item" data-not-support-estate="[2,8,9]">
 
 			<select name="nama" style="width: 340px" id="view">
 
@@ -144,15 +144,15 @@
 
 			<input name="zamin" class="text" type="text"><span class="tag">مترمربع</span>
 
-			<label>زیربنــا: </label>
+			<label data-not-support-estate="[2,8,9]">زیربنــا: </label>
 
-			<input name="zirbana" class="text" type="text"><span class="tag">مترمربع</span>
+			<input name="zirbana" class="text" type="text" data-not-support-estate="[2,8,9]"><span class="tag">مترمربع</span>
 
 		</div>
 
 		<div class="item">
 
-			<select name="floor" style="width: 100px" id="floor-number">
+			<select name="floor" style="width: 100px" id="floor-number" data-not-support-estate="[2,7,8,9]">
 
 				<option>- طبقه -</option>
 
@@ -165,9 +165,9 @@
 
 			</select>
 
-			<select name="room" style="width: 100px">
+			<select name="room" style="width: 100px" data-not-support-estate="[2,8,9]">
 
-				<option>- خواب -</option>
+				<option>- اتاق -</option>
 
 				<option>1</option>
 				<option>2</option>
@@ -178,7 +178,7 @@
 
 			</select>
 
-			<select name="kafpoosh" style="width: 150px">
+			<select name="kafpoosh" style="width: 150px" data-not-support-estate="[2,8,9]">
 
 				<option>- نوع کفپوش -</option>
 
@@ -256,7 +256,7 @@
 
 	<div class="options-def">
 
-		<div class="item">
+		<div class="item" data-not-support-estate="[2,8]">
 
 			<h2>امکانات گرمایشی / سرمایشی: </h2>
 
@@ -280,7 +280,7 @@
 
 		</div>
 
-		<div class="item">
+		<div class="item" data-not-support-estate="[2,8]">
 
 			<h2>فضاهای موجود: </h2>
 
@@ -306,25 +306,33 @@
 
 		</div>
 
-		<div class="item">
+		<div class="item" data-not-support-estate="[2,6,8,9]">
 
-			<h2>امکانات رفاهی: </h2>
+			<h2>امکانات: </h2>
 
 			<ul class="mj-radiogroup">
 
-				<li class="mj-radio"><input class="dom-radio" name="open" type="radio">آشپزخانه اوپن</li>
+				<li class="mj-radio" data-not-support-estate="[4]"><input class="dom-radio" name="open" type="radio">آشپزخانه اوپن</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="asansor" type="radio">آسانسور</li>
+				<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="asansor" type="radio">آسانسور</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="mostakhdem" type="radio">مستخدم</li>
+				<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="mostakhdem" type="radio">مستخدم</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="seraidar" type="radio">سرایدار</li>
+				<li class="mj-radio"><input class="dom-radio" name="seraydar" type="radio">سرایدار</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="pool" type="radio">استخر</li>
+				<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="estakhr" type="radio">استخر</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="sona" type="radio">سونا</li>
+				<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="sona" type="radio">سونا</li>
 
-				<li class="mj-radio"><input class="dom-radio" name="jakoozi" type="radio">جکوزی</li>
+				<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="jakoozi" type="radio">جکوزی</li>
+
+				<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="donabsh" type="radio">دو نبش</li>
+
+				<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="barmeidan" type="radio">بر میدان</li>
+
+				<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelkuche" type="radio">داخل کوچه</li>
+
+				<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelpasaj" type="radio">داخل پاساژ</li>
 
 			</ul>
 
@@ -377,6 +385,8 @@
 </form>
 
 </div>
+
+<script src="../scripts/js/lib/removeUnwantedTypes.js"></script>
 
 <script src="../scripts/js/lib/location-loader.js"></script>
 

@@ -148,7 +148,8 @@ dataURItoBlob = (dataURI) ->
 
 packageSendForm = (fd, data, name, el) =>
 
-
+	$ '[name=insert-submit]'
+	.attr('disabled','disabled')
 
 	$.ajax
 
@@ -192,14 +193,22 @@ packageSendForm = (fd, data, name, el) =>
 
 					el.appendChild img
 
+			$ '[name=insert-submit]'
+			.removeAttr('disabled')
 
 		catch e
 
 			console.error e.toString(), data
 
+			$ '[name=insert-submit]'
+			.removeAttr('disabled')
+
 	.fail () ->
 
 		console.log "Checkout Ajax Failed!"
+
+		$ '[name=insert-submit]'
+		.removeAttr('disabled')
 
 
 all = document.querySelectorAll '.add-pic'
