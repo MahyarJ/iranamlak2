@@ -55,73 +55,73 @@
 
 	$searchQuery = new SearchQuery('estate');
 
-	// if ($state){
+		if ($state){
 
-	// 	$searchQuery->simple('state', $state);
+			$searchQuery->simple('state', $state);
 
-	// }
+		}
 
-	// if ($city){
+		if ($city){
 
-	// 	$searchQuery->simple('city', $city);
+			$searchQuery->simple('city', $city);
 
-	// }
+		}
 
-	// if ($zone){
+		if ($zone){
 
-	// 	$searchQuery->simple('zone', $zone);
+			$searchQuery->simple('zone', $zone);
 
-	// }
+		}
 
-	// if ($dealType){
+		if ($dealType){
 
-	// 	$searchQuery->simple('deal-type', $dealType);
+			$searchQuery->simple('deal-type', $dealType);
 
-	// }
+		}
 
-	// if ($estateType){
+		if ($estateType){
 
-	// 	$searchQuery->simple('estate-type', $estateType);
+			$searchQuery->simple('estate-type', $estateType);
 
-	// }
+		}
 
-	// if ($checkboxGroup){
+		if ($checkboxGroup){
 
-	// 	$searchQuery->like('options', $checkboxGroup);
+			$searchQuery->like('options', $checkboxGroup);
 
-	// }
+		}
 
-	// if ($priceRange){
+		if ($priceRange){
 
-	// 	$priceRangeArr = json_decode($priceRange);
+			$priceRangeArr = json_decode($priceRange);
 
-	// 	$searchQuery->between('total-price', $priceRangeArr[0], $priceRangeArr[1]);
+			$searchQuery->between('total-price', $priceRangeArr[0], $priceRangeArr[1]);
 
-	// }
+		}
 
-	// if ($areaRange){
+		if ($areaRange){
 
-	// 	$areaRangeArr = json_decode($areaRange);
+			$areaRangeArr = json_decode($areaRange);
 
-	// 	$searchQuery->between('zamin', $areaRangeArr[0], $areaRangeArr[1]);
+			$searchQuery->between('zamin', $areaRangeArr[0], $areaRangeArr[1]);
 
-	// }
+		}
 
-	// if ($roomRange){
+		if ($roomRange){
 
-	// 	$roomRangeArr = json_decode($roomRange);
+			$roomRangeArr = json_decode($roomRange);
 
-	// 	$searchQuery->between('room', $roomRangeArr[0], $roomRangeArr[1]);
+			$searchQuery->between('room', $roomRangeArr[0], $roomRangeArr[1]);
 
-	// }
+		}
 
-	// if ($ageRange){
+		if ($ageRange){
 
-	// 	$ageRangeArr = json_decode($ageRange);
+			$ageRangeArr = json_decode($ageRange);
 
-	// 	$searchQuery->between('age', $ageRangeArr[0], $ageRangeArr[1]);
+			$searchQuery->between('age', $ageRangeArr[0], $ageRangeArr[1]);
 
-	// }
+		}
 
 	// print_r($searchQuery->buildQuery());
 
