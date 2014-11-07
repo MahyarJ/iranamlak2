@@ -12,7 +12,7 @@ $titleColor: #E9541C
 	z-index: 10
 	visibility: hidden
 	opacity: 0
-	@include transition(all .5s)
+	@include transition(all .8s)
 
 
 	.bg
@@ -34,7 +34,7 @@ $titleColor: #E9541C
 	background-color: white
 	border-right: 25px $mainColor solid
 	top: 70px
-	padding: 30px
+	padding: 10px 20px
 	opacity: 1
 	width: 850px
 	height: 500px
@@ -62,11 +62,101 @@ $titleColor: #E9541C
 
 			@include transform(translateY(0))
 
-.window-content-box-ajax-load
+	.ad-box
 
-	position: relative
+		position: absolute
+		top: 55px
+		bottom: 10px
+		width: 240px
+		left: 10px
+		padding: 5px
+		border: 1px dashed #555
 
 
-.form
 
-	position: relative
+	.types .type
+
+		color: $mainColor
+		margin-left: 25px
+		font-family: "Yekan"
+		font-size: 20px
+
+	.address-parts .part
+
+		color: black
+		margin-left: 30px
+		font-family: "Yekan"
+		font-size: 18px
+
+	.estate-properties
+
+		position: relative
+		margin-top: 50px
+		width: 650px
+		height: 120px
+
+	.estate-properties .window-item
+
+		width: 200px
+		float: right
+
+		.item-title
+
+			color: $mainColor
+			font-family: "Yekan"
+			font-size: 14px
+			float: right
+			width: 80px
+
+
+		.item-value
+
+			color: black
+			font-family: "Yekan"
+			font-size: 14px
+			float: right
+			width: 120px
+
+	.estate-options
+
+		position: relative
+		clear: both
+		height: 150px
+
+		.window-item
+
+			position: relative
+			clear: both
+
+		.window-item .item-title
+
+			color: $mainColor
+			font-family: "Yekan"
+			font-size: 14px
+			float: right
+			width: 200px
+
+		.window-item .item-value
+
+			color: black
+			font-family: "Yekan"
+			font-size: 14px
+			float: right
+			width: 300px
+
+	.estate-pictures
+
+		position: relative
+		clear: both
+		height: 100px
+		width: 600px
+
+		.estate-picture
+
+			position: relative
+			float: right
+			width: 180px
+			height: 140px
+			margin-left: 10px
+			background: white
+			border: 1px dashed #555
