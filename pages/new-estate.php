@@ -63,6 +63,10 @@
 			$checkboxGroup[25] = getValue('dakhelkuche') == 'on' ? '1' : '0';
 			$checkboxGroup[26] = getValue('dakhelpasaj') == 'on' ? '1' : '0';
 
+			$filename1 = getValue('filename1');
+			$filename2 = getValue('filename2');
+			$filename3 = getValue('filename3');
+
 			$newEstateQuery = new NewEstateQuery('estate');
 
 			if ($state){
@@ -172,16 +176,35 @@
 
 			$result = doquery($newEstateQuery->buildQuery());
 
+
 			if ($result){
 
-				echo json_encode($result);
+				$id = getId();
 
-				## redirect to success page
+				if ($filename1)
+
+					if ($filename1 != '')
+
+						// create folder $id inside user move it to folder named this $id
+						echo '1';
+
+				if ($filename2)
+
+					if ($filename1 != '')
+
+						// create folder $id inside user move it to folder named this $id
+						echo "2";
+
+				if ($filename3)
+
+					if ($filename1 != '')
+
+						// create folder $id inside user move it to folder named this $id
+						echo '3';
+
+			// 	## redirect to success page
 
 			}
-
 	}
 
-	header("Location: ../?panel=add-content");
-
-?>
+	// header("Location: ../?panel=add-content");
