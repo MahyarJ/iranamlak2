@@ -7,7 +7,7 @@ makeDropable = (packageEl, nextOne) =>
 
 	packageEl.children[1].addEventListener "change", (event) =>
 
-		packageEl.children[2].value = packageEl.children[1].value
+		packageEl.children[2].value = packageEl.children[2].getAttribute('name')
 
 		return if packageEl.children[1].files.length is 0
 
@@ -118,11 +118,13 @@ readFile = (file, el) ->
 
 		fd = new FormData()
 
-		fd.append "image", blob, file.name
+		name = file.name.split('.')
 
-		el.children[2].value = file.name
+		fd.append "image", blob, el.children[2].getAttribute('name') + '.' + name[1]
 
-		packageSendForm fd, data, file.name, el
+		el.children[2].value = el.children[2].getAttribute('name') + '.' + name[1]
+
+		packageSendForm fd, data, el.children[2].getAttribute('name') + '.' + name[1], el
 
 		return
 
