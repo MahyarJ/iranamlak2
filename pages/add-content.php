@@ -347,7 +347,7 @@ $state_result = doquery($query);
 
 					<div class="text-nothin"></div>
 
-					<input id="file-location"  accept="image/*" type="file" name="browse01" style="display:none" />
+					<input id="file-location"  accept="image/*" type="file" name="browse01"/>
 
 					<input type="hidden" name="filename1" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
 
@@ -357,7 +357,7 @@ $state_result = doquery($query);
 
 					<div class="text-nothin"></div>
 
-					<input id="file-location"  accept="image/*" type="file" name="browse02" style="display:none" />
+					<input id="file-location"  accept="image/*" type="file" name="browse02"/>
 
 					<input type="hidden" name="filename2" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
 
@@ -367,7 +367,7 @@ $state_result = doquery($query);
 
 					<div class="text-nothin"></div>
 
-					<input id="file-location"  accept="image/*" type="file" name="browse03" style="display:none" />
+					<input id="file-location"  accept="image/*" type="file" name="browse03"/>
 
 					<input type="hidden" name="filename3" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
 
