@@ -176,35 +176,53 @@
 
 			$result = doquery($newEstateQuery->buildQuery());
 
-
 			if ($result){
 
 				$id = getId();
 
-				if ($filename1)
+				if ($filename1){
 
-					if ($filename1 != '')
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
 
-						// create folder $id inside user move it to folder named this $id
-						echo '1';
+					$url = $oldUrl . $id . '/';
 
-				if ($filename2)
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
 
-					if ($filename1 != '')
+					rename(($oldUrl . $filename1), ($url . $filename1));
 
-						// create folder $id inside user move it to folder named this $id
-						echo "2";
+				}
 
-				if ($filename3)
+				if ($filename2){
 
-					if ($filename1 != '')
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
 
-						// create folder $id inside user move it to folder named this $id
-						echo '3';
+					$url = $oldUrl . $id . '/';
 
-			// 	## redirect to success page
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
+
+					rename(($oldUrl . $filename2), ($url . $filename2));
+
+				}
+
+				if ($filename3){
+
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+
+					$url = $oldUrl . $id . '/';
+
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
+
+					rename(($oldUrl . $filename3), ($url . $filename3));
+
+				}
 
 			}
 	}
 
-	// header("Location: ../?panel=add-content");
+	header("Location: ../?panel=add-content");
