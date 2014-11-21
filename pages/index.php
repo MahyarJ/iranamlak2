@@ -85,6 +85,12 @@
 
 								break;
 
+							case 'my-estates':
+
+								require_once 'my-estates.php';
+
+								break;
+
 
 						}
 
