@@ -16,6 +16,12 @@ function doquery($sql) {
     return mysqli_query($con, $sql);
 }
 
+function getId()
+{
+	$con = &$GLOBALS['con'];
+	return mysqli_insert_id($con);
+}
+
 function fetch($result)
 {
     return mysqli_fetch_assoc($result);

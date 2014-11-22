@@ -85,6 +85,12 @@
 
 								break;
 
+							case 'my-estates':
+
+								require_once 'my-estates.php';
+
+								break;
+
 						}
 
 					else {
@@ -94,8 +100,6 @@
 						require_once 'news.php';
 
 					}
-
-
 
 
 					if (isset($_GET['search-submit']))

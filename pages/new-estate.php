@@ -58,6 +58,15 @@
 			$checkboxGroup[21] = getValue('sona') == 'on' ? '1' : '0';
 			$checkboxGroup[22] = getValue('jakoozi') == 'on' ? '1' : '0';
 
+			$checkboxGroup[23] = getValue('donabsh') == 'on' ? '1' : '0';
+			$checkboxGroup[24] = getValue('barmeidan') == 'on' ? '1' : '0';
+			$checkboxGroup[25] = getValue('dakhelkuche') == 'on' ? '1' : '0';
+			$checkboxGroup[26] = getValue('dakhelpasaj') == 'on' ? '1' : '0';
+
+			$filename1 = getValue('filename1');
+			$filename2 = getValue('filename2');
+			$filename3 = getValue('filename3');
+
 			$newEstateQuery = new NewEstateQuery('estate');
 
 			if ($state){
@@ -169,14 +178,51 @@
 
 			if ($result){
 
-				echo json_encode($result);
+				$id = getId();
 
-				## redirect to success page
+				if ($filename1){
+
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+
+					$url = $oldUrl . $id . '/';
+
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
+
+					rename(($oldUrl . $filename1), ($url . $filename1));
+
+				}
+
+				if ($filename2){
+
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+
+					$url = $oldUrl . $id . '/';
+
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
+
+					rename(($oldUrl . $filename2), ($url . $filename2));
+
+				}
+
+				if ($filename3){
+
+					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+
+					$url = $oldUrl . $id . '/';
+
+					if (!file_exists($url)) {
+					    mkdir($url, 0777, true);
+					}
+
+					rename(($oldUrl . $filename3), ($url . $filename3));
+
+				}
 
 			}
-
 	}
 
 	header("Location: ../?panel=add-content");
-
-?>
