@@ -92,7 +92,7 @@
 
 					<div class="expander-content">
 
-						لینک صفحه:
+						<p>لینک صفحه</p>
 
 						<input style="width: 300px; direction: ltr" class="text" type="text">
 
@@ -111,11 +111,46 @@
 
 			<h1>نوع تبلیغ خود را انتخاب نمایید:</h1>
 
-			<div class="mj-radio expander"><input class="dom-radio" name="motion" type="radio">تبلیغات متحرک</div>
+			<div class="mj-radio expander">
 
-			<div class="mj-radio expander"><input class="dom-radio" name="pictext" type="radio">عکس و متن</div>
+				<input class="dom-radio" name="motion" type="radio">تبلیغات متحرک
 
-			<div class="mj-radio expander"><input class="dom-radio" name="text" type="radio">متن خالی</div>
+				<div class="expander-content">
+
+					<p>محل درج تصویر متحرک با فرمت gif.</p>
+
+					<div class="ad-picture-box">تصویر را بیاورید و یا کلیک نمایید</div>
+
+				</div>
+
+			</div>
+
+			<div class="mj-radio expander">
+
+				<input class="dom-radio" name="pictext" type="radio">عکس و متن
+
+				<div class="expander-content">
+
+					<input type="text" style="width: 460px;" class="text" placeholder="متن آگهی">
+
+					<div class="ad-picture-box">تصویر را بیاورید و یا کلیک نمایید</div>
+
+				</div>
+
+			</div>
+
+			<div class="mj-radio expander">
+
+				<input class="dom-radio" name="text" type="radio">فقط متن
+
+				<div class="expander-content">
+
+					<input type="text" style="width: 460px;" class="text" placeholder="متن آگهی">
+
+				</div>
+
+
+			</div>
 
 		</div>
 

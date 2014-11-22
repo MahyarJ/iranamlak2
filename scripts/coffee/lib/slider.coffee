@@ -4,6 +4,8 @@ slider = document.querySelector '.slider'
 
 slides = document.querySelectorAll '.slide'
 
+$('.prev').fadeOut('fast')
+
 # slider is in the first slide
 sliderLeft = 0
 
@@ -22,7 +24,7 @@ $('.next').click ->
 
 	if sliderLeft > 0
 
-		$('.prev').css('opacity', 1)
+		$('.prev').fadeIn('fast')
 
 
 $('.prev').click ->
@@ -33,7 +35,7 @@ $('.prev').click ->
 
 	if sliderLeft is 0
 
-		$(this).css('opacity', 0)
+		$(this).fadeOut('fast')
 
 $('.expander').click ->
 

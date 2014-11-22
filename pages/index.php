@@ -85,8 +85,18 @@
 
 								break;
 
-
 						}
+
+					else {
+
+						require_once 'slideshow.php';
+
+						require_once 'news.php';
+
+					}
+
+
+
 
 					if (isset($_GET['search-submit']))
 					{
@@ -139,5 +149,6 @@
 
 <script src="../scripts/js/lib/showWindow.js"></script>
 
+<script src="../scripts/js/lib/news.js"></script>
 
 </html>
