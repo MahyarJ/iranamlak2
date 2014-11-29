@@ -1,0 +1,120 @@
+.news-insertion
+
+	position: absolute
+	top: 10px
+	right: 10px
+	// right: 600px
+	width: 300px
+
+h1
+
+	position: relative
+	margin-top: 30px
+	font-size: 14px
+	color: $mainColor01
+
+
+.news-list-items
+
+	position: absolute
+	top: 60px
+	right: 10px
+	left: 0
+
+.appender
+
+	position: absolute
+	top: 10px
+	width: 785px
+	background: green
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	font-size: 42px
+	font-weight: bold
+	margin-right: 10px
+	@include transition(all .4s)
+
+	&:hover
+
+		background: lighten(green, 10)
+
+.news-list-item
+
+	position: relative
+	height: 50px
+	width: 775px
+	background: white
+	padding: 5px
+	border-bottom: 1px solid #CCC
+	cursor: pointer
+	color: black
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #EEF
+
+	&.selected
+
+		background: lighten(red, 40)
+
+	.news-id
+
+		position: absolute
+		font-family: 'Yekan'
+		color: #AAA
+		font-size: 14px
+		left: 15px
+		top: 2px
+
+	.news-summery
+
+		position: relative
+		font-family: 'Yekan'
+		color: #999
+		font-size: 16px
+		margin-right: 10px
+
+
+
+.window-form-submit-btn
+
+	position: relative
+	background: $green
+	width: 500px
+	font-size: 18px
+	line-height: 50px
+	text-align: center
+	height: 50px
+	color: #FFF
+	cursor: pointer
+	margin-top: 20px
+	@include border-radius(5px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: lighten($green, 10)
+
+
+.window-textbox
+
+	background: #DDD
+	padding-right: 5px
+	height: 40px
+	color: black
+	border: none
+	font-family: 'Yekan'
+	width: 500px
+	max-width: 500px
+	@include border-radius(4px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #AAA
+
+	&.textarea
+
+		height: 150px

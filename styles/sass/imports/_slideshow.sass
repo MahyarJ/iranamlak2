@@ -8,10 +8,100 @@
 	background: white
 	overflow: hidden
 
+	&:hover
+
+		.slide-text
+
+			top: 0
+
+
 .slideshow-slide
 
 	position: absolute
 	width: 785px
 	height: 285px
-	background: url('../../files/images/slides/01.jpg')
+	top: 0
+	left: 0
+	z-index: 100
+	@include transition(all .4s)
+
+
+.slide-pic
+
+	position: absolute
+	width: 785px
+	height: 285px
+	top: 0
+	left: 0
+	@include background-size(785px 285px)
+
+
+.slide-text
+
+	position: absolute
+	top: -100px
+	left: 0
+	right: 0
+	background: black
+	padding: 10px
+	opacity: .7
+	height: 80px
+	@include transition(all .4s)
+
+	.main-text
+
+		font-size: 22px
+		margin-right: 10px
+
+	.sub-text
+
+		font-size: 14px
+		margin-right: 10px
+
+.slideshow-nav-right
+
+	position: absolute
+	height: 60px
+	width: 50px
+	background: url('../../files/images/slideshow-nav-right.png') no-repeat center center
+	top: 110px
+	right: 1px
+	opacity: .6
+	cursor: pointer
+	z-index: 101
+	@include transition(all .4s)
+	@include transform(scale3d(.9, .9, .9))
+
+	&:hover
+
+		@include transform(scale3d(1, 1, 1))
+		opacity: 1
+
+
+.slideshow-nav-left
+
+	position: absolute
+	height: 60px
+	width: 50px
+	background: url('../../files/images/slideshow-nav-left.png') no-repeat center center
+	top: 110px
+	left: 1px
+	opacity: .6
+	cursor: pointer
+	z-index: 101
+	@include transition(all .4s)
+	@include transform(scale3d(.9, .9, .9))
+
+	&:hover
+
+		@include transform(scale3d(1, 1, 1))
+		opacity: 1
+
+
+
+
+
+
+
+
 

@@ -16,6 +16,7 @@ for i in [0...slides.length]
 
 	slides[i].style.left = -i * 850 + 'px'
 
+
 $('.next').click ->
 
 	sliderLeft += slideWidth

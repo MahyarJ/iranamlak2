@@ -120,3 +120,21 @@ $priceColor: #A0410D
 
 		background: #AAA
 		color: $priceColor
+
+.bank-select-btn
+
+	position: relative
+	float: right
+	margin: 10px
+	width: 100px
+	height: 100px
+	@include border-radius(4px)
+	@include transition(all .4s)
+
+	&:hover
+
+		@include box-shadow(1px 1px 6px 1px #AAA)
+
+	&#parsian
+
+		background: url(../../files/images/PECLogo.gif) no-repeat white center center
