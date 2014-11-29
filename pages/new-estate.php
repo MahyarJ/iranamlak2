@@ -5,6 +5,9 @@
 	include_once 'core/database.php';
 	require_once 'core/PostData.php';
 
+	include_once 'core/jdf.php';
+	$insdate = jdate('Ymd');
+
 	if (getValue('insert-submit')) $type = 'insert-estate';
 
 	switch ($type) {
@@ -173,6 +176,8 @@
 				$newEstateQuery->add('uid', $_SESSION['uid']);
 
 			}
+
+			$newEstateQuery->add('insert_date', $insdate);
 
 			$result = doquery($newEstateQuery->buildQuery());
 
