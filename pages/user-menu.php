@@ -44,6 +44,7 @@
 		<ul class="user-menu-column">
 
 			<li><a href="?panel=add-location">افزودن نواحی جدید</a></li>
+			<li><a href="?panel=news-management">مدیریت اخبار</a></li>
 			<li><a href="core/logout.php">خروج</a></li>
 
 

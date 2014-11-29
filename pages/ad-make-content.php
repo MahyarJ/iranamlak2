@@ -154,17 +154,15 @@
 
 		</div>
 
-		<div class="slide">
+		<div class="slide" data-multi="no">
 
 			<h1>پرداخت آنلاین:</h1>
 
-		</div>
+			<div class="bank-select-btn" id="parsian"></div>
 
-		<div class="slide">
-
-			<input name="ad-make-submit" type="submit" value="ثبت">
 
 		</div>
+
 
 	</form>
 

@@ -85,24 +85,25 @@
 
 								break;
 
+							case 'news-management':
+
+								require_once 'news-management.php';
+
+								break;
+
 							case 'my-estates':
 
 								require_once 'my-estates.php';
 
 								break;
 
+							case 'home':
+
+								require_once 'slideshow.php';
+
+								require_once 'news.php';
+
 						}
-
-					else {
-
-						require_once 'slideshow.php';
-
-						require_once 'news.php';
-
-					}
-
-
-
 
 					if (isset($_GET['search-submit']))
 					{
