@@ -16,7 +16,7 @@
 
 	<div class="bg"></div>
 
-	<div class="logo"></div>
+	<a href="./"><div class="logo"></div></a>
 
 	<div class="login-opener">
 

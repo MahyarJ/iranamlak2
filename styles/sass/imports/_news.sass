@@ -1,0 +1,73 @@
+$mainColor: #9E080F
+
+.news-box-content
+
+	position: absolute
+	font-family: 'Yekan'
+	line-height: 32px
+	top: 300px
+	bottom: 20px
+	left: 5px
+	color: black
+	font-size: 18px
+	text-align: justify
+	// opacity: 0
+	padding: 25px
+	overflow-y: scroll
+
+	.news-item
+
+		position: relative
+		margin-bottom: 20px
+		height: 120px
+		overflow: hidden
+
+.news-id
+
+	position: absolute
+	font-family: 'Yekan'
+	color: black
+	font-size: 14px
+	left: 20px
+	top: 2px
+
+.news-date
+
+	position: relative
+	font-family: 'Yekan'
+	color: #999
+	font-size: 16px
+	margin-right: 160px
+
+.news-title
+
+	position: relative
+	font-family: 'Droid Arabic Naskh'
+	color: $mainColor
+	font-size: 16px
+	margin-right: 160px
+	cursor: pointer
+	@include transition(all .4s)
+
+	&:hover
+
+		color: red
+
+.news-body
+
+	position: relative
+	font-family: 'Droid Arabic Naskh'
+	color: black
+	font-size: 14px
+	margin-right: 160px
+
+.news-thumb
+
+	position: absolute
+	width: 145px
+	height: 110px
+	right: 0
+	top: 0
+	border: 1px dashed black
+
+

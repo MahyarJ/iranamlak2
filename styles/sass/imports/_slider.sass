@@ -17,7 +17,7 @@ $priceColor: #A0410D
 		background: $green
 		color: #FFF
 		width: 180px
-		height: 35px
+		height: 30px
 		font-weight: bold
 		text-align: center
 		cursor: pointer
@@ -30,14 +30,14 @@ $priceColor: #A0410D
 
 	.next
 
-		left: 180px
-		bottom: 30px
+		left: 0px
+		top: 30px
 
 	.prev
 
-		right: 180px
-		bottom: 30px
-		opacity: 0
+		right: 0px
+		top: 30px
+
 
 .slider
 
@@ -45,7 +45,7 @@ $priceColor: #A0410D
 	width: 750px
 	height: 700px
 	left: 0
-	top: 0
+	top: 100
 	@include transition(all .4s)
 
 .slide
@@ -53,7 +53,7 @@ $priceColor: #A0410D
 	position: absolute
 	width: 750px
 	height: 700px
-	top: 0
+	top: 80px
 	left: 0
 	color: #000
 
@@ -75,15 +75,16 @@ $priceColor: #A0410D
 
 	position: absolute
 	top: 0
-	left: 0
+	left: 300px
 	width: 120px
-	height: 40px
+	height: 60px
 	color: white
 	padding: 5px 30px
 	font-size: 24px
 	text-align: center
+	line-height: 60px
 	font-family: 'Yekan'
-	background: $green
+	background: #EB2A10
 	@include border-radius(0 0 5px 5px)
 
 .expander-content
@@ -101,4 +102,21 @@ $priceColor: #A0410D
 		margin-left: auto
 
 
+.ad-picture-box
 
+	position: relative
+	border: 2px dashed black
+	font-family: 'Yekan'
+	margin-top: 10px
+	font-size: 16px
+	height: 70px
+	width: 460px
+	line-height: 70px
+	color: black
+	@include border-radius(4px)
+	@include transition(all .4s)
+
+	&:hover
+
+		background: #AAA
+		color: $priceColor
