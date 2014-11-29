@@ -1,6 +1,6 @@
 <div class="news-list"> -->
 
-	<div class="appender" id="append-news">+</div>
+	<div class="appender" id="append-news">افــزودن خـــــبر جــــدید</div>
 
 	<div class="news-list-items">
 
@@ -22,8 +22,6 @@
 
 					 	"<div class=\"news-summery\">" . $row['display_date'] . "<br>" . $row['title_fa'] . "</div> " .
 
-					 	// "<div class=\"news-news\">" . $row['title_fa'] . "</div> " .
-
 					 "</div>";
 
 				$index++;
@@ -35,5 +33,3 @@
 	</div>
 
 </div>
-
-<script src="../scripts/js/lib/manage-news.js"></script>

@@ -1,76 +1,30 @@
 <div class="news-box-content">
 
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">پنجشنبه 22 / 05 / 93</div>
-
-		<div class="news-title">مجلس بازهم به وزیر پیشنهادی علوم، تحقیقات و فناوری رای اعتماد نداد</div>
-
-		<div class="news-body">مجلس ایران صلاحیت فخرالدین احمدی دانش آشتیانی، فرد پیشنهادی برای تصدی وزارت علوم، تحقیقات و فناوری را رد کرده و باعث طرح مساله تمدید سرپرستی این وزارتخانه شده است.</div>
-
-	</div>
-
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">دوشنبه 26 / 08 / 93</div>
-
-		<div class="news-title">مذاکرات اتمی ایران؛ آغاز هفته‌ای دشوار و تعیین‌کننده</div>
-
-		<div class="news-body">مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-			<br>مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-		</div>
-
-	</div>
-
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">دوشنبه 26 / 08 / 93</div>
-
-		<div class="news-title">مذاکرات اتمی ایران؛ آغاز هفته‌ای دشوار و تعیین‌کننده</div>
-
-		<div class="news-body">مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-			<br>مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-		</div>
-
-	</div>
-
 	<?php
 
-		// $query = "SELECT * FROM `news` ORDER BY `id` DESC";
+		include_once 'core/database.php';
 
-		// $res = doquery($query);
+		$query = "SELECT * FROM `news` ORDER BY `date` DESC";
 
-		// while ($news = fetch($res)) {
+		$result = doquery($query);
 
-		// 	$display_date = $news['display_date'];
+		$index = 1;
 
-		// 	$title = $news['title_fa'];
+		while ($row = fetch($result)) {
 
-		// 	$body = $news['body_fa'];
+			echo '<div class="news-item">';
 
-		// 	echo "<div class=\"news-item\">" .
+			echo '<div class="news-thumb"></div>';
 
-		// 			"<div class=\"news-date\">" . $display_date . "</div>" .
+			echo '<div class="news-date">' . $row['display_date'] . '</div>';
 
-		// 			"<div class=\"news-title\">" . $title . "</div>" .
+			echo '<div class="news-title">' . $row['title_fa'] . '</div>';
 
-		// 			"<div class=\"news-body\">" . $body . "</div>" .
+			echo '<div class="news-body">' . $row['body_fa'] . '</div>';
 
-		// 		"</div>";
+			echo '</div>';
 
-
-		// }
-
+		}
 
 	?>
 
