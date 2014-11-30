@@ -7,10 +7,14 @@ siteWindowClose = document.querySelector ".window-close"
 
 $('.estate-item').click ->
 
+
 	siteWindow.style.visibility = "visible"
 
 	siteWindow.style.opacity = 1
 
+	$('.estate-view').css
+
+		'visibility': 'visible'
 
 # Window Close
 
@@ -20,4 +24,11 @@ siteWindowClose.addEventListener "click", (e) ->
 
 	siteWindow.style.visibility = "hidden"
 
+	$('.estate-view').css
+
+		'visibility': 'hidden'
+
+	$('.news-insertion').css
+
+		'visibility': 'hidden'
 

@@ -10,6 +10,11 @@ do newsOnClick = ->
 
 		loadNews $(this).attr('id')
 
+		$('.news-insertion').css
+
+			'visibility': 'visible',
+
+
 		$('.window').css
 
 			'visibility': 'visible',
