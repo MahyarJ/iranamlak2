@@ -29,8 +29,6 @@ editNews = (id, titleFa, bodyFa) ->
 
 	.done (data) ->
 
-		console.log data
-
 		$('.news-list-items').html data
 
 		do newsOnClick
@@ -83,6 +81,8 @@ loadNews = (newsId) ->
 # Ajax Runners
 
 $('#append-news').click ->
+
+	console.log 'appended'
 
 	do appendNews
 
