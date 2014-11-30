@@ -16,7 +16,7 @@
 
 	<div class="bg"></div>
 
-	<a href="./"><div class="logo"></div></a>
+	<a href="./?panel=home"><div class="logo"></div></a>
 
 	<div class="login-opener">
 
@@ -40,15 +40,15 @@
 
 	<ul class="right-menu">
 
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=1"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 1) ) echo "class=\"selected\"" ?> >خانه-ویلا</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=1"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 1) ) echo "class=\"selected\"" ?> >خانه | ویلا</li></a>
 		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=2"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 2) ) echo "class=\"selected\"" ?> >زمین</li></a>
 		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=3"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 3) ) echo "class=\"selected\"" ?> >آپارتمان</li></a>
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=4"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 4) ) echo "class=\"selected\"" ?> >اداری-مطب-دفتر</li></a>
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=5"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 5) ) echo "class=\"selected\"" ?> >تجاری-پاساژ-مغازه</li></a>
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=6"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 6) ) echo "class=\"selected\"" ?> >سوله-کارگاه-کارخانه</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=4"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 4) ) echo "class=\"selected\"" ?> >اداری | مطب | دفتر</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=5"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 5) ) echo "class=\"selected\"" ?> >تجاری | پاساژ | مغازه</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=6"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 6) ) echo "class=\"selected\"" ?> >سوله | کارگاه | کارخانه</li></a>
 		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=7"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 7) ) echo "class=\"selected\"" ?> >چهاردیواری</li></a>
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=8"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 8) ) echo "class=\"selected\"" ?> >باغ-زمین کشاورزی</li></a>
-		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=9"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 9) ) echo "class=\"selected\"" ?> >دامداری-دامپروری</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=8"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 8) ) echo "class=\"selected\"" ?> >باغ | زمین کشاورزی</li></a>
+		<a href="?panel=search&amp;deal=<?php echo $deal; ?>&amp;estate=9"> <li <?php if (isset($_GET['estate']) && ($_GET['estate'] == 9) ) echo "class=\"selected\"" ?> >دامداری | دامپروری</li></a>
 
 	</ul>
 
