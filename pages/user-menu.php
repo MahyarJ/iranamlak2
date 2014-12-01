@@ -34,7 +34,7 @@
 
 		<ul class="user-menu-column">
 
-			<li><a href="">تایید آگهی های تایید نشده</a></li>
+			<li><a href="?panel=review">تایید آگهی های تایید نشده</a></li>
 			<li><a href="">بررسی آگهی های ثبت شده</a></li>
 			<li><a href="">وضعیت پرداخت ها</a></li>
 			<li><a href="">تنظیمات</a></li>
