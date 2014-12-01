@@ -4,6 +4,19 @@ siteWindow = document.querySelector ".window"
 
 siteWindowClose = document.querySelector ".window-close"
 
+$('.bg').click =>
+
+	siteWindow.style.opacity = 0
+
+	siteWindow.style.visibility = "hidden"
+
+	$('.estate-view').css
+
+		'visibility': 'hidden'
+
+	$('.news-insertion').css
+
+		'visibility': 'hidden'
 
 $('.estate-item').click ->
 

@@ -97,23 +97,19 @@
 
 								break;
 
+							case 'review':
+
+								require_once 'admin-review.php';
+
+								break;
+
 							case 'home':
 
 								require_once 'slideshow.php';
 
 								require_once 'news.php';
 
-
 						}
-
-					// else {
-
-					// 	require_once 'slideshow.php';
-
-					// 	require_once 'news.php';
-
-					// }
-
 
 					if (isset($_GET['search-submit']))
 					{

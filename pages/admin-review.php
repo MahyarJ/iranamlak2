@@ -1,6 +1,6 @@
 <div class="result-item">
 
-	<div class="result-item-my-estates">تمام آگهی های من</div>
+	<div class="result-item-my-estates">تمام آگهی های تایید نشده</div>
 
 <?php
 
@@ -13,11 +13,7 @@
 
 	$searchQuery = new SearchQuery('estate');
 
-		if ($_SESSION['uid']){
-
-			$searchQuery->simple('uid', $_SESSION['uid']);
-
-		}
+	$searchQuery->simple('approved', '0');
 
 	$result = doquery($searchQuery->buildQuery());
 
@@ -31,7 +27,6 @@
 
 		}
 	}
-
 
 ?>
 

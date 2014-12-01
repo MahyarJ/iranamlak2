@@ -230,4 +230,4 @@
 			}
 	}
 
-	header("Location: ../?panel=add-content");
+	header("Location: ./?panel=my-estates");
