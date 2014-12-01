@@ -10,6 +10,10 @@ do newsOnClick = ->
 
 		loadNews $(this).attr('id')
 
+		$('.news-insertion').css
+
+			'visibility': 'visible',
+
 		$('.window').css
 
 			'visibility': 'visible',
@@ -28,8 +32,6 @@ editNews = (id, titleFa, bodyFa) ->
 		data: 'news-id=' + id + '&title-fa=' + titleFa + '&body-fa=' + bodyFa
 
 	.done (data) ->
-
-		console.log data
 
 		$('.news-list-items').html data
 
@@ -83,6 +85,8 @@ loadNews = (newsId) ->
 # Ajax Runners
 
 $('#append-news').click ->
+
+	console.log 'appended'
 
 	do appendNews
 

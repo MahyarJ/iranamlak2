@@ -6,7 +6,13 @@
 
 		<!-- Contents of subject -->
 
-		<?php include_once 'window-boxes/edit-news.php'; ?>
+		<?php
+
+			include_once 'window-boxes/edit-news.php';
+
+			include_once 'window-boxes/estate-view.php';
+
+		?>
 
 		<div class="window-close">بازگشت »</div>
 

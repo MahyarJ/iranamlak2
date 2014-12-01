@@ -1,3 +1,5 @@
+<div class="estate-view">
+
 <!--
 
 	<div class="ad-pane">
@@ -34,8 +36,8 @@
 
 		</div>
 
-	</div>
--->
+
+	</div> -->
 
 	<span class="types">
 
@@ -159,3 +161,10 @@
 	</div>
 
 	<div class="ad-box"></div>
+<<<<<<< HEAD
+
+
+
+</div>
+=======
+>>>>>>> a9facbd97a479269d2186a18f3aa5a07ffba1ce0

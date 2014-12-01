@@ -1,76 +1,46 @@
 <div class="news-box-content">
 
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">پنجشنبه 22 / 05 / 93</div>
-
-		<div class="news-title">مجلس بازهم به وزیر پیشنهادی علوم، تحقیقات و فناوری رای اعتماد نداد</div>
-
-		<div class="news-body">مجلس ایران صلاحیت فخرالدین احمدی دانش آشتیانی، فرد پیشنهادی برای تصدی وزارت علوم، تحقیقات و فناوری را رد کرده و باعث طرح مساله تمدید سرپرستی این وزارتخانه شده است.</div>
-
-	</div>
-
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">دوشنبه 26 / 08 / 93</div>
-
-		<div class="news-title">مذاکرات اتمی ایران؛ آغاز هفته‌ای دشوار و تعیین‌کننده</div>
-
-		<div class="news-body">مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-			<br>مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-		</div>
-
-	</div>
-
-	<div class="news-item">
-
-		<div class="news-thumb"></div>
-
-		<div class="news-date">دوشنبه 26 / 08 / 93</div>
-
-		<div class="news-title">مذاکرات اتمی ایران؛ آغاز هفته‌ای دشوار و تعیین‌کننده</div>
-
-		<div class="news-body">مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-			<br>مذاکره‌کنندگان ایران و قدرت‌های جهانی به وین رفته‌اند تا در آخرین دور مذاکرات هسته‌ای، برای دست یافتن به توافقی در مورد برنامه اتمی ایران و پایان دادن به مناقشه‌ای ۱۲ ساله تلاش کنند.
-
-		</div>
-
-	</div>
-
 	<?php
 
-		// $query = "SELECT * FROM `news` ORDER BY `id` DESC";
+		  // $arabic_indic_digits = array(
+		  //   "\xD9\xA0",
+		  //   "\xD9\xA1",
+		  //   "\xD9\xA2",
+		  //   "\xD9\xA3",
+		  //   "\xD9\xA4",
+		  //   "\xD9\xA5",
+		  //   "\xD9\xA6",
+		  //   "\xD9\xA7",
+		  //   "\xD9\xA8",
+		  //   "\xD9\xA9",
+		  // );
+		  // $number = 1234.56;
+		  // $formatted_number = format_number($number, 2);
+		  // $arabic_number = str_replace(array_keys($arabic_indic_digits), $arabic_indic_digits, $formatted_number);
 
-		// $res = doquery($query);
+		include_once 'core/database.php';
 
-		// while ($news = fetch($res)) {
+		$query = "SELECT * FROM `news` ORDER BY `date` DESC";
 
-		// 	$display_date = $news['display_date'];
+		$result = doquery($query);
 
-		// 	$title = $news['title_fa'];
+		$index = 1;
 
-		// 	$body = $news['body_fa'];
+		while ($row = fetch($result)) {
 
-		// 	echo "<div class=\"news-item\">" .
+			echo '<div class="news-item">';
 
-		// 			"<div class=\"news-date\">" . $display_date . "</div>" .
+			echo '<div class="news-thumb"></div>';
 
-		// 			"<div class=\"news-title\">" . $title . "</div>" .
+			echo '<div class="news-date">' . $row['display_date'] . '</div>';
 
-		// 			"<div class=\"news-body\">" . $body . "</div>" .
+			echo '<div class="news-title">' . $row['title_fa'] . '</div>';
 
-		// 		"</div>";
+			echo '<div class="news-body">' . $row['body_fa'] . '</div>';
 
+			echo '</div>';
 
-		// }
-
+		}
 
 	?>
 
