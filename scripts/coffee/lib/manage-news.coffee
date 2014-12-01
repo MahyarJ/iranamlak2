@@ -14,7 +14,6 @@ do newsOnClick = ->
 
 			'visibility': 'visible',
 
-
 		$('.window').css
 
 			'visibility': 'visible',

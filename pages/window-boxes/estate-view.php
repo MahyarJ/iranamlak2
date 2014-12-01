@@ -1,6 +1,8 @@
 <div class="estate-view">
 
-	<!-- <div class="ad-pane">
+<!--
+
+	<div class="ad-pane">
 
 		<div class="ad">
 
@@ -33,6 +35,7 @@
 			گرفته شده است.
 
 		</div>
+
 
 	</div> -->
 
@@ -158,7 +161,10 @@
 	</div>
 
 	<div class="ad-box"></div>
+<<<<<<< HEAD
 
 
 
 </div>
+=======
+>>>>>>> a9facbd97a479269d2186a18f3aa5a07ffba1ce0
