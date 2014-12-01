@@ -10,4 +10,12 @@ $('.login-opener').click ->
 
 	$('.footer').css "bottom", 0
 
+	event.stopPropagation()
 
+$('html').click =>
+
+	$('.footer').css "bottom", -290
+
+$('.footer').click (event) =>
+
+	event.stopPropagation()
