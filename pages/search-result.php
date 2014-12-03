@@ -206,8 +206,8 @@
 		if (0 != $start)
 		{
 
-			echo createPage(0, 1, ">>", $dealType, $estateType, $count, $sortBy, $order, $start);
-			echo createPage(0, 1, ">", $dealType, $estateType, $count, $sortBy, $order, $start);
+			echo createPage(-1, 1, ">>", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, 1, ">", $dealType, $estateType, $count, $sortBy, $order, 0);
 
 		}
 
@@ -222,8 +222,8 @@
 
 		if ($totalCountInt != $start + $count - 1)
 		{
-			echo createPage(-1, $page + 1, "<", $dealType, $estateType, $count, $sortBy, $order, $start);
-			echo createPage($totalCountInt, ceil($totalCountInt / $count), "<<", $dealType, $estateType, $count, $sortBy, $order, $start + $count - 1);
+			echo createPage(-1, $page + 1, "<", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, ceil($totalCountInt / $count), "<<", $dealType, $estateType, $count, $sortBy, $order, 0);
 		}
 		echo "</div>";
 
