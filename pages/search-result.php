@@ -137,8 +137,8 @@
 	$count = getValue('count');
 	$page = getValue('page');
 
-	$count = $count == false ? '1' : $count;
-	$page = $page == false ? '0' : $page;
+	$count = $count == false ? '10' : $count;
+	$page = $page == false ? '1' : $page;
 
 	$start = ($page - 1) * $count;
 
@@ -172,7 +172,7 @@
 
 			$date = substr($resultarray['insert_date'],0,4) . "/" . substr($resultarray['insert_date'],4,2) . "/" . substr($resultarray['insert_date'],6,2);
 
-			echo generateEstateRow($date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
+			echo generateEstateRow($resultarray['id'], $date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
 
 		}
 	}
