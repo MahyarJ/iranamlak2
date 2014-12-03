@@ -200,7 +200,15 @@
 	if ($totalCountInt > $count)
 	{
 
-		echo "<div class='pagination'>" . createPage(0, 1, "اولین", $dealType, $estateType, $count, $sortBy, $order, $start);
+		echo "<div class='pagination'>";
+
+		if (0 != $start)
+		{
+
+			echo createPage(0, 1, "اولین", $dealType, $estateType, $count, $sortBy, $order, $start);
+			echo createPage(0, 1, "قبلی", $dealType, $estateType, $count, $sortBy, $order, $start);
+
+		}
 
 		for ($i = 0, $j = 1; $i < $totalCountInt; $j++, $i = $i + $count)
 		{
@@ -211,7 +219,12 @@
 
 		}
 
-		echo createPage(0, ceil($totalCountInt / $count), "بعدی", $dealType, $estateType, $count, $sortBy, $order, $start) . createPage(0, ceil($totalCountInt / $count), "آخرین", $dealType, $estateType, $count, $sortBy, $order, $start) . "</div>";
+		if ($totalCountInt != $start + $count - 1)
+		{
+			echo createPage(-1, $page + 1, "بعدی", $dealType, $estateType, $count, $sortBy, $order, $start);
+			echo createPage($totalCountInt, ceil($totalCountInt / $count), "آخرین", $dealType, $estateType, $count, $sortBy, $order, $start + $count - 1);
+		}
+		echo "</div>";
 	}
 
 	function createPage($page, $number, $text, $dealType, $estateType, $count, $sortBy, $order, $weAreAt)
