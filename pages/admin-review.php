@@ -23,7 +23,7 @@
 
 			$resultarray = fetch($result);
 
-			echo generateEstateRow("امروز", $resultarray['total-price'], $resultarray['zirbana'], $resultarray['unit-price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
+			echo generateEstateRow("امروز", $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
 
 		}
 	}

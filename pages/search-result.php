@@ -80,14 +80,14 @@
 	if ($dealType)
 	{
 
-		$searchQuery->simple('deal-type', $dealType);
+		$searchQuery->simple('deal_type', $dealType);
 
 	}
 
 	if ($estateType)
 	{
 
-		$searchQuery->simple('estate-type', $estateType);
+		$searchQuery->simple('estate_type', $estateType);
 
 	}
 
@@ -103,7 +103,7 @@
 
 		$priceRangeArr = json_decode($priceRange);
 
-		$searchQuery->between('total-price', $priceRangeArr[0], $priceRangeArr[1]);
+		$searchQuery->between('total_price', $priceRangeArr[0], $priceRangeArr[1]);
 
 	}
 
@@ -172,7 +172,7 @@
 
 			$date = substr($resultarray['insert_date'],0,4) . "/" . substr($resultarray['insert_date'],4,2) . "/" . substr($resultarray['insert_date'],6,2);
 
-			echo generateEstateRow($date, $resultarray['total-price'], $resultarray['zirbana'], $resultarray['unit-price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
+			echo generateEstateRow($date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
 
 		}
 	}
