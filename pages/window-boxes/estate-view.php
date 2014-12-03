@@ -57,7 +57,7 @@
 
 		<span class="part" id="zone">سازمان آب</span>
 
-		<span class="part" id="address">خیابان نهم شمالی</span>
+		<!-- <span class="part" id="address">خیابان نهم شمالی</span> -->
 
 	</span>
 

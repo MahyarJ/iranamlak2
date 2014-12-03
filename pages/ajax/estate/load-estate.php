@@ -70,17 +70,17 @@
 
 		case '1':
 
-			$dealType = 'رهن و اجاره';
+			$dealType = 'رهن/اجاره';
 			break;
 
 		case '2':
 
-			$dealType = 'هرید و فروش';
+			$dealType = 'فروش';
 			break;
 
 		case '3':
 
-			$dealType = 'پیش فروش';
+			$dealType = 'پیش&zwnjفروش';
 			break;
 
 		case '4':
