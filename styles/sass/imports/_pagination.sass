@@ -1,29 +1,37 @@
 .pagination
 
 	position: relative
-	margin-right: 10px
+	// margin-right: 10px
 	padding: 10px
+	text-align: center
 	@include transition(all .4s)
 
 .pagination-number
 
 	position: relative
-	margin-right: 10px
-	padding: 5px
-	cursor: pointer
-	color: black
+	// margin-right: 10px
+	padding: 10px
+	background: red
+	padding: 10px 20px
+	color: white
+	cursor: default
+	font-family: 'Yekan'
+	font-size: 16px
 	@include transition(all .4s)
-
-	&:hover
-
-		background: white
 
 
 .pagination-wearehere-number
 
 	position: relative
-	margin-right: 10px
-	padding: 5px
-	cursor: default
+	// margin-right: 10px
+	padding: 10px 20px
+	cursor: pointer
+	font-size: 16px
+	font-family: 'Yekan'
 	color: #9e0b0f
 	@include transition(all .4s)
+
+	&:hover
+
+		background: lighten(red, 15)
+		color: white
