@@ -72,8 +72,8 @@
 
 			if ($totalCountInt > $start + $count - 1)
 			{
-				echo createPage(-1, $page + 1, "بعدی", $count, 0);
-				echo createPage(-1, ceil($totalCountInt / $count), "آخری", $count, 0);
+				echo createPage(-1, $page + 1, "«", $count, 0);
+				echo createPage(-1, ceil($totalCountInt / $count), "‹", $count, 0);
 			}
 
 			for ($i = 0, $j = 1; $i < $totalCountInt; $j++, $i = $i + $count)
@@ -88,8 +88,8 @@
 			if (1 < $page)
 			{
 
-				echo createPage(-1, 1, "اولی", $count, 0);
-				echo createPage(-1, $page-1, "قبلی", $count, 0);
+				echo createPage(-1, 1, "›", $count, 0);
+				echo createPage(-1, $page-1, "»", $count, 0);
 
 			}
 			echo "</div>";
