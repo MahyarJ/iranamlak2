@@ -188,7 +188,7 @@
 
 			$date = substr($resultarray['insert_date'],0,4) . "/" . substr($resultarray['insert_date'],4,2) . "/" . substr($resultarray['insert_date'],6,2);
 
-			echo generateEstateRow($resultarray['id'], $date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
+			echo generateEstateRow($resultarray['id'], $date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address'], $resultarray['estate_type'], $resultarray['deal_type']);
 
 		}
 	}
