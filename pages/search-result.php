@@ -135,12 +135,32 @@
 	}
 
 	$count = getValue('count');
-	$start = getValue('start');
+	$page = getValue('page');
 
-	$count = $count == false ? '5' : $count;
-	$start = $start == false ? '0' : $start;
+	$count = $count == false ? '1' : $count;
+	$page = $page == false ? '0' : $page;
 
-	$result = doquery($searchQuery->buildQuery() . " LIMIT " . $count . " OFFSET " . $start);
+	$start = ($page - 1) * $count;
+
+	$totalCount = doquery($searchQuery->buildCountQuery());
+
+	$totalCountInt = (0 + ($totalCount->fetch_assoc()['count']));
+
+	if ($start >= $totalCountInt)
+	{
+		$start = $totalCountInt - $count;
+	}
+
+	$query = $searchQuery->buildQuery();
+
+	if ($totalCountInt > $count)
+	{
+
+		$query = $query . " LIMIT " . $count . " OFFSET " . $start;
+
+	}
+
+	$result = doquery($query);
 
 	if ($result)
 	{
@@ -158,28 +178,31 @@
 	}
 
 
-	echo "</div><div class='pagination'>";
-
-	$totalCount = doquery($searchQuery->buildCountQuery());
-
-	$totalCountInt = (0 + ($totalCount->fetch_assoc()['count']));
-
-	echo $totalCountInt;
-
-	for ($i = 0, $j = 1; $i < $totalCountInt; $j++, $i = $i + $count)
-	{
-
-		echo createPage($i, $j, $dealType, $estateType, $start);
-
-	}
-
 	echo "</div>";
 
-	function createPage($page, $number, $dealType, $estateType, $weAreAt)
+
+	if ($totalCountInt > $count)
+	{
+
+		echo "<div class='pagination'>";
+
+		for ($i = 0, $j = 1; $i < $totalCountInt; $j++, $i = $i + $count)
+		{
+
+			if ($j > ($start / $count) - 4 && $j <= ($start / $count) + 6)
+
+				echo createPage($i, $j, $dealType, $estateType, $count, $start);
+
+		}
+
+		echo "</div>";
+	}
+
+	function createPage($page, $number, $dealType, $estateType, $count, $weAreAt)
 	{
 
 		if ($page == $weAreAt) return "<span class='pagination-wearehere-number'>" . $number . "</span>";
 
-		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&start=" . $page . ">" . $number . "</a>";
+		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&page=" . $number . "&count=" . $count . ">" . $number . "</a>";
 
 	}
