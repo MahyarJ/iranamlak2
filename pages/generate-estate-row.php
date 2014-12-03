@@ -1,10 +1,10 @@
 <?php
 
-function generateEstateRow($date, $totalPrice, $zirbana, $gheimat, $state, $city, $zone, $address){
+function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, $city, $zone, $address){
 
 	$data = "
 
-		<div class=\"estate-item\">
+		<div class=\"estate-item\" id=\"$id\">
 
 		<div class=\"date\">$date</div>
 

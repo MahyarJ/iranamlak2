@@ -51,13 +51,13 @@
 
 	<span class="address-parts">
 
-		<span class="part" id="1">تهران</span>
+		<span class="part" id="state">تهران</span>
 
-		<span class="part" id="2">صادقیه</span>
+		<span class="part" id="city">صادقیه</span>
 
-		<span class="part" id="3">سازمان آب</span>
+		<span class="part" id="zone">سازمان آب</span>
 
-		<span class="part" id="4">خیابان نهم شمالی</span>
+		<span class="part" id="address">خیابان نهم شمالی</span>
 
 	</span>
 
@@ -160,11 +160,8 @@
 
 	</div>
 
-	<div class="ad-box"></div>
-<<<<<<< HEAD
 
+<div class="ad-box"></div>
 
 
 </div>
-=======
->>>>>>> a9facbd97a479269d2186a18f3aa5a07ffba1ce0

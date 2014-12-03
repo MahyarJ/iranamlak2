@@ -1,6 +1,6 @@
 <?php
 
-include_once 'core/database.php';
+// include_once '../core/database.php';
 
 function getZoneName($id)
 {

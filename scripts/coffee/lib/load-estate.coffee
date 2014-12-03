@@ -2,6 +2,8 @@ do estateOnClick = ->
 
 	$('.estate-item').click ->
 
+		loadEstate $(this).attr('id')
+
 		$('.estate-view').css
 
 			'visibility': 'visible'
@@ -43,17 +45,25 @@ loadEstate = (estateId) ->
 
 	$.ajax
 
-		url:  '../pages/ajax/estate/load-estate.php'
+		url:  '../pages/ajax/estate/load-estate.php',
 		type: 'GET',
 		data: 'estate-id=' + estateId
 
 	.done (data) ->
 
+		# console.log data
+
 		temp = JSON.parse(data)
 
-		# $('#news-title-fa-textbox').val temp.titleFa
+		$('#deal-type').html temp.dealType
 
-		# $('#news-body-fa-textarea').val temp.bodyFa
+		$('#state').html temp.state
+
+		$('#city').html temp.city
+
+		$('#zone').html temp.zone
+
+		$('#address').html temp.address
 
 	.fail () ->
 

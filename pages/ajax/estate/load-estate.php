@@ -1,39 +1,40 @@
 <?php
 
-	include_once '../core/database.php';
+	include_once '../../core/database.php';
+	include_once '../../database/states.php';
+	include_once '../../database/cities.php';
+	include_once '../../database/zone.php';
 
 	$properties = [];
 
 	$query = "SELECT * FROM `estate` WHERE `id` = '" . $_GET['estate-id'] . "'";
 
-	$result = doquery($query);
+	$estate = fetch(doquery($query));
 
-	while ($estate = fetch($result))
+	$properties = array(
 
-		array_push($estates, array(
+		"id"      => $estate['id'],
+		"state" => getStateName($estate['state']),
+		"city" => getCityName($estate['city']),
+		"zone" => getZoneName($estate['zone']),
+		"address" => $estate['address'],
+		"estateType" => $estate['estate_type'],
+		"dealType" => $estate['deal_type'],
+		"nama" => $estate['nama'],
+		"unitPrice" => $estate['unit_price'],
+		"totalPrice" => $estate['total_price'],
+		"zamin" => $estate['zamin'],
+		"zirbana" => $estate['zirbana'],
+		"floor" => $estate['floor'],
+		"room" => $estate['room'],
+		"kafpoosh" => $estate['kafpoosh'],
+		"options" => $estate['options'],
+		"uid" => $estate['uid'],
+		"insertDate" => $estate['insert_date'],
 
-			"id"      => $estate['id'],
-			"state" => $estate['state'],
-			"city" => $estate['city'],
-			"zone" => $estate['zone'],
-			"address" => $estate['address'],
-			"estateType" => $estate['estate_type'],
-			"dealType" => $estate['deal_type'],
-			"nama" => $estate['nama'],
-			"unitPrice" => $estate['unit_price'],
-			"totalPrice" => $estate['total_price'],
-			"zamin" => $estate['zamin'],
-			"zirbana" => $estate['zirbana'],
-			"floor" => $estate['floor'],
-			"room" => $estate['room'],
-			"kafpoosh" => $estate['kafpoosh'],
-			"options" => $estate['options'],
-			"uid" => $estate['uid'],
-			"insertDate" => $estate['insert_date'],
+	);
 
-		));
-
-	echo json_encode($estates);
+	echo json_encode($properties);
 
 ?>
 
