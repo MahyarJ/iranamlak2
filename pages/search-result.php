@@ -200,25 +200,25 @@
 	if ($totalCountInt > $count)
 	{
 
-		echo "<div class='pagination'>";
+		echo "<div class='pagination'>" . createPage(0, 0, "اولین", $dealType, $estateType, $count, $sortBy, $order, $start);
 
 		for ($i = 0, $j = 1; $i < $totalCountInt; $j++, $i = $i + $count)
 		{
 
 			if ($j > ($start / $count) - 4 && $j <= ($start / $count) + 6)
 
-				echo createPage($i, $j, $dealType, $estateType, $count, $sortBy, $order, $start);
+				echo createPage($i, $j, $j, $dealType, $estateType, $count, $sortBy, $order, $start);
 
 		}
 
-		echo "</div>";
+		echo createPage(0, $totalCountInt - $count, "آخرین", $dealType, $estateType, $count, $sortBy, $order, $start) . "</div>";
 	}
 
-	function createPage($page, $number, $dealType, $estateType, $count, $sortBy, $order, $weAreAt)
+	function createPage($page, $number, $text, $dealType, $estateType, $count, $sortBy, $order, $weAreAt)
 	{
 
-		if ($page == $weAreAt) return "<span class='pagination-wearehere-number'>" . $number . "</span>";
+		if ($page == $weAreAt) return "<span class='pagination-wearehere-number'>" . $text . "</span>";
 
-		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&page=" . $number . "&count=" . $count . "&sortby=" . $sortBy . "&order=" . $order . ">" . $number . "</a>";
+		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&page=" . $number . "&count=" . $count . "&sortby=" . $sortBy . "&order=" . $order . ">" . $text . "</a>";
 
 	}
