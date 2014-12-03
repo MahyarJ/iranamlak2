@@ -22,6 +22,20 @@
 	$dealType = getValue('deal');
 	$estateType = getValue('estate');
 
+	$sortBy = getValue('sortby');
+	$sort = '';
+	if ($sortBy == false || $sortBy == 'date' || $sortBy == 'تاریخ')
+	{
+		$sort = 'insert_date';
+	}
+	else if ($sortBy == 'price' || $sortBy == 'قیمت')
+	{
+		$sort = 'total_price';
+	}
+
+	$order = getValue('order');
+	$order = $order == false ? 'DESC' : $order;
+
 	$checkboxGroup = array();
 
 	$checkboxGroup[1] = getValue('shofaj') == 'on' ? '1' : '0';
@@ -153,6 +167,8 @@
 
 	$query = $searchQuery->buildQuery();
 
+	$query = $query . " ORDER BY `" . $sort . "` " . $order;
+
 	if ($totalCountInt > $count)
 	{
 
@@ -191,18 +207,18 @@
 
 			if ($j > ($start / $count) - 4 && $j <= ($start / $count) + 6)
 
-				echo createPage($i, $j, $dealType, $estateType, $count, $start);
+				echo createPage($i, $j, $dealType, $estateType, $count, $sortBy, $order, $start);
 
 		}
 
 		echo "</div>";
 	}
 
-	function createPage($page, $number, $dealType, $estateType, $count, $weAreAt)
+	function createPage($page, $number, $dealType, $estateType, $count, $sortBy, $order, $weAreAt)
 	{
 
 		if ($page == $weAreAt) return "<span class='pagination-wearehere-number'>" . $number . "</span>";
 
-		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&page=" . $number . "&count=" . $count . ">" . $number . "</a>";
+		return "<a class='pagination-number' href=?panel=search&deal=" . $dealType . "&estate=" . $estateType . "&page=" . $number . "&count=" . $count . "&sortby=" . $sortBy . "&order=" . $order . ">" . $number . "</a>";
 
 	}
