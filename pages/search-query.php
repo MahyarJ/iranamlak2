@@ -10,6 +10,8 @@ class SearchQuery{
 
 		$this->queryStart = "SELECT * FROM `$table` WHERE";
 
+		$this->queryCountStart = "SELECT COUNT(*) AS count FROM `$table` WHERE";
+
 		$this->cols = [];
 
 	}
@@ -96,6 +98,28 @@ class SearchQuery{
 	{
 
 		$query = $this->queryStart;
+
+		$count = count($this->cols);
+
+		if ($count == 0) return $query . " true";
+
+		for ($i = 0; $i < $count; $i++)
+		{
+
+			if ($i > 0) $query = $query . " AND ";
+
+			$query = $query . $this->cols[$i];
+
+		}
+
+		return $query;
+
+	}
+
+	public function buildCountQuery()
+	{
+
+		$query = $this->queryCountStart;
 
 		$count = count($this->cols);
 
