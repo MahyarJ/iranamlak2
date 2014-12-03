@@ -1,6 +1,6 @@
-<div class="result-item">
+<div class="result_item">
 
-	<div class="result-item-my-estates">آگـــهـــی هـــای من</div>
+	<div class="result_item-my-estates">آگـــهـــی هـــای من</div>
 
 <?php
 
@@ -29,7 +29,7 @@
 
 			$date = substr($resultarray['insert_date'],0,4) . "/" . substr($resultarray['insert_date'],4,2) . "/" . substr($resultarray['insert_date'],6,2);
 
-			echo generateEstateRow($resultarray['id'], $date, $resultarray['total-price'], $resultarray['zirbana'], $resultarray['unit-price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
+			echo generateEstateRow($resultarray['id'], $date, $resultarray['total_price'], $resultarray['zirbana'], $resultarray['unit_price'], getStateName($resultarray['state']), getCityName($resultarray['city']), getZoneName($resultarray['zone']), $resultarray['address']);
 
 		}
 	}
