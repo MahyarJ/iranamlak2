@@ -203,11 +203,11 @@
 
 		echo "<div class='pagination'>";
 
-		if (0 != $start)
+		if (0 > $page)
 		{
 
-			echo createPage(-1, 1, ">>", $dealType, $estateType, $count, $sortBy, $order, 0);
-			echo createPage(-1, 1, ">", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, 1, "اولی", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, $page-1, "قبلی", $dealType, $estateType, $count, $sortBy, $order, 0);
 
 		}
 
@@ -220,10 +220,10 @@
 
 		}
 
-		if ($totalCountInt != $start + $count - 1)
+		if ($totalCountInt < $start + $count - 1)
 		{
-			echo createPage(-1, $page + 1, "<", $dealType, $estateType, $count, $sortBy, $order, 0);
-			echo createPage(-1, ceil($totalCountInt / $count), "<<", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, $page + 1, "بعدی", $dealType, $estateType, $count, $sortBy, $order, 0);
+			echo createPage(-1, ceil($totalCountInt / $count), "آخری", $dealType, $estateType, $count, $sortBy, $order, 0);
 		}
 		echo "</div>";
 
