@@ -21,3 +21,5 @@
 </div>
 
 <script src="../scripts/js/lib/manage-news.js"></script>
+
+<script src="../scripts/js/lib/load-estate.js"></script>

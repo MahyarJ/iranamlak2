@@ -17,8 +17,14 @@
 			<li><a href="./?panel=add">سپردن آگهی ملک</a></li>
 			<li><a href="./?panel=ad-make-wizard">درج تبلیغات در سایت</a></li>
 			<li><a href="">تغییر مشخصات</a></li>
-			<li><a href="./?panel=my-estates">تمام آگهی های من</a></li>
 			<li><a href="core/logout.php">خروج</a></li>
+
+		</ul>
+
+		<ul class="user-menu-column">
+
+			<li><a href="./?panel=my-estates">آگــهی هــای من</a></li>
+
 
 		</ul>
 

@@ -1,6 +1,6 @@
 <div class="result-item">
 
-	<div class="result-item-my-estates">تمام آگهی های من</div>
+	<div class="result-item-my-estates">آگـــهـــی هـــای من</div>
 
 <?php
 

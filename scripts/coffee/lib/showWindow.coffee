@@ -18,16 +18,16 @@ $('.bg').click =>
 
 		'visibility': 'hidden'
 
-$('.estate-item').click ->
+# $('.estate-item').click ->
 
+# 	siteWindow.style.visibility = "visible"
 
-	siteWindow.style.visibility = "visible"
+# 	siteWindow.style.opacity = 1
 
-	siteWindow.style.opacity = 1
+# 	$('.estate-view').css
 
-	$('.estate-view').css
+# 		'visibility': 'visible'
 
-		'visibility': 'visible'
 
 # Window Close
 
