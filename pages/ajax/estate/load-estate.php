@@ -70,7 +70,7 @@
 
 		case '1':
 
-			$dealType = 'رهن/اجاره';
+			$dealType = 'رهن‌و‌اجاره';
 			break;
 
 		case '2':
