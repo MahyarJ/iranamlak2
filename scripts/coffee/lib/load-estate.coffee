@@ -77,8 +77,6 @@ loadEstate = (estateId) ->
 
 		$('#nama').html temp.nama
 
-		console.log temp
-
 		$('#pic1').attr "src", temp.pic1
 
 		$('#pic2').attr "src", temp.pic2
