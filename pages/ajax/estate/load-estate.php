@@ -95,6 +95,40 @@
 
 	}
 
+	$heatOptions = array();
+	$areaExtentions = array();
+	$khuneOptions = array();
+	$maghazeOptions = array();
+
+	if ($estate['options'][0] == '1') $heatOptions[] = 'شوفاژ';
+	if ($estate['options'][1] == '1') $heatOptions[] = 'پکیج';
+	if ($estate['options'][2] == '1') $heatOptions[] = 'بخاری';
+	if ($estate['options'][3] == '1') $heatOptions[] = 'کولر';
+	if ($estate['options'][4] == '1') $heatOptions[] = 'اسپیلت';
+	if ($estate['options'][5] == '1') $heatOptions[] = 'چیلر';
+	if ($estate['options'][6] == '1') $heatOptions[] = 'فن کوئل';
+
+	if ($estate['options'][7] == '1') $areaExtentions[] = 'لابی';
+	if ($estate['options'][8] == '1') $areaExtentions[] = 'حیاط';
+	if ($estate['options'][9] == '1') $areaExtentions[] = 'حیاط خلوت';
+	if ($estate['options'][10] == '1') $areaExtentions[] = 'انباری';
+	if ($estate['options'][11] == '1') $areaExtentions[] = 'بالکن';
+	if ($estate['options'][12] == '1') $areaExtentions[] = 'زیرزمین';
+	if ($estate['options'][13] == '1') $areaExtentions[] = 'پارکینگ';
+	if ($estate['options'][14] == '1') $areaExtentions[] = 'پاسیو';
+
+	if ($estate['options'][15] == '1') $khuneOptions[] = 'آشپزخانه اوپن';
+	if ($estate['options'][16] == '1') $khuneOptions[] = 'آسانسور';
+	if ($estate['options'][17] == '1') $khuneOptions[] = 'مستخدم';
+	if ($estate['options'][18] == '1') $khuneOptions[] = 'سرایدار';
+	if ($estate['options'][19] == '1') $khuneOptions[] = 'استخر';
+	if ($estate['options'][20] == '1') $khuneOptions[] = 'سونا';
+	if ($estate['options'][21] == '1') $khuneOptions[] = 'جکوزی';
+
+	if ($estate['options'][22] == '1') $maghazeOptions[] = 'دونبش';
+	if ($estate['options'][23] == '1') $maghazeOptions[] = 'بر میدان';
+	if ($estate['options'][24] == '1') $maghazeOptions[] = 'داخل کوچه';
+	if ($estate['options'][25] == '1') $maghazeOptions[] = 'داخل پاساژ';
 
 	$properties = array(
 
@@ -103,6 +137,7 @@
 		"city" => getCityName($estate['city']),
 		"zone" => getZoneName($estate['zone']),
 		"address" => $estate['address'],
+		"estateTypeId" => $estate['estate_type'],
 		"estateType" => $estateType,
 		"dealType" => $dealType,
 		"nama" => $estate['nama'],
@@ -113,22 +148,21 @@
 		"floor" => $estate['floor'],
 		"room" => $estate['room'],
 		"kafpoosh" => $estate['kafpoosh'],
-		"options" => $estate['options'],
+		"heatOptions" => $heatOptions,
+		"areaExtentions" => $areaExtentions,
+		"khuneOptions" => $khuneOptions,
+		"maghazeOptions" => $maghazeOptions,
 		"uid" => $estate['uid'],
 		"insertDate" => $estate['insert_date'],
 
 	);
 
+	for ($i=1; $i <= 3 ; $i++) {
+
+		$url = '../upld/' . $estate['uid'] . '/' . $estate['id'] . '/filename' . $i . '.jpg';
+
+		if (file_exists('../../' . $url)) $properties['pic' . $i] = $url;
+
+	}
+
 	echo json_encode($properties);
-
-?>
-
-
-
-
-
-
-
-
-
-

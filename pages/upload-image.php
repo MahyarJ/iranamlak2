@@ -16,7 +16,7 @@
 
 	session_start();
 
-	$url = '../upld/' . $_SESSION['username'] . '/';
+	$url = '../upld/' . $_SESSION['uid'] . '/';
 
 	if (!file_exists($url)) {
 	    mkdir($url, 0777, true);

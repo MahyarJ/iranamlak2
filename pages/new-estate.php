@@ -98,13 +98,13 @@
 
 			if ($dealType){
 
-				$newEstateQuery->add('deal-type', $dealType);
+				$newEstateQuery->add('deal_type', $dealType);
 
 			}
 
 			if ($estateType){
 
-				$newEstateQuery->add('estate-type', $estateType);
+				$newEstateQuery->add('estate_type', $estateType);
 
 			}
 
@@ -149,13 +149,13 @@
 
 			if ($totalPrice){
 
-				$newEstateQuery->add('total-price', $totalPrice);
+				$newEstateQuery->add('total_price', $totalPrice);
 
 			}
 
 			if ($unitPrice){
 
-				$newEstateQuery->add('unit-price', $unitPrice);
+				$newEstateQuery->add('unit_price', $unitPrice);
 
 			}
 
@@ -181,13 +181,14 @@
 
 			$result = doquery($newEstateQuery->buildQuery());
 
+
 			if ($result){
 
 				$id = getId();
 
 				if ($filename1){
 
-					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+					$oldUrl = '../upld/' . $_SESSION['uid'] . '/';
 
 					$url = $oldUrl . $id . '/';
 
@@ -201,7 +202,7 @@
 
 				if ($filename2){
 
-					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+					$oldUrl = '../upld/' . $_SESSION['uid'] . '/';
 
 					$url = $oldUrl . $id . '/';
 
@@ -215,7 +216,7 @@
 
 				if ($filename3){
 
-					$oldUrl = '../upld/' . $_SESSION['username'] . '/';
+					$oldUrl = '../upld/' . $_SESSION['uid'] . '/';
 
 					$url = $oldUrl . $id . '/';
 
