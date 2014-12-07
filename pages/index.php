@@ -2,9 +2,9 @@
 
 	session_start();
 
-	require_once 'core/config.php';
+	include_once 'core/config.php';
 
-	require_once 'core/database.php';
+	include_once 'core/database.php';
 
 ?>
 
@@ -30,13 +30,7 @@
 
 <body>
 
-
-
-	<!-- header of website -->
-
-	<?php require_once 'header.php' ?>
-
-
+	<?php include_once 'header.php' ?>
 
 
 	<!-- middle of the page -->
@@ -46,7 +40,6 @@
 		<div class="main">
 
 			<div class="bg"></div>
-
 
 			<!-- Main content of website shows here by needs -->
 
@@ -61,62 +54,62 @@
 
 							case 'add':
 
-								require_once 'add-content.php';
+								include_once 'add-content.php';
 
 								break;
 
 							case 'search':
 
-								require_once 'search-content.php';
+								include_once 'search-content.php';
 
-								require_once 'search-result.php';
+								include_once 'search-result.php';
 
 								break;
 
 							case 'add-location':
 
-								require_once 'add-location.php';
+								include_once 'add-location.php';
 
 								break;
 
 							case 'ad-make-wizard':
 
-								require_once 'ad-make-content.php';
+								include_once 'ad-make-content.php';
 
 								break;
 
 							case 'news-management':
 
-								require_once 'news-management.php';
+								include_once 'news-management.php';
 
 								break;
 
 							case 'my-estates':
 
-								require_once 'my-estates.php';
+								include_once 'my-estates.php';
 
 								break;
 
 							case 'review':
 
-								require_once 'admin-review.php';
+								include_once 'admin-review.php';
 
 								break;
 
 							case 'home':
 
-								require_once 'slideshow.php';
+								include_once 'slideshow.php';
 
-								require_once 'news.php';
+								include_once 'news.php';
 
 						}
 
 					if (isset($_GET['search-submit']))
 					{
 
-						require_once 'search-content.php';
+						include_once 'search-content.php';
 
-						require_once 'search-result.php';
+						include_once 'search-result.php';
 
 					}
 
