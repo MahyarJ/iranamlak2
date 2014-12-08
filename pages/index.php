@@ -2,8 +2,6 @@
 
 	session_start();
 
-	include_once 'core/config.php';
-
 	include_once 'core/database.php';
 
 ?>
@@ -32,14 +30,19 @@
 
 	<?php include_once 'header.php' ?>
 
-
 	<!-- middle of the page -->
 
 	<div class="mid">
 
+		<?php include_once 'rightpane.php' ?>
+
 		<div class="main">
 
 			<div class="bg"></div>
+
+			<!-- Side ads shows here -->
+
+			<?php include_once 'ads.php' ?>
 
 			<!-- Main content of website shows here by needs -->
 
@@ -117,14 +120,7 @@
 
 			</div>
 
-
-			<!-- Side ads shows here -->
-
-			<?php include_once 'ads.php' ?>
-
 		</div>
-
-		<?php include_once 'rightpane.php' ?>
 
 	</div>
 
