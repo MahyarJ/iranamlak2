@@ -84,6 +84,6 @@
 
 	}
 
-	header("Location: index.php?signin=ok");
+	header("Location: index.php?signin=ok&panel=my-estates");
 
 ?>

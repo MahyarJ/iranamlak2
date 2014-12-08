@@ -3,8 +3,8 @@
 // require_once 'config.php';
 
 $config['dbh'] = 'localhost';
-$config['dbu'] = 'iramtest';
-$config['dbp'] = 'Test1234';
+$config['dbu'] = 'iramtest_mahyar';
+$config['dbp'] = 'Mahyar1234';
 $config['dbn'] = 'iramtest_iranamlak';
 $config['auth'] = 0;
 
