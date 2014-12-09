@@ -70,7 +70,7 @@ $state_result = doquery($query);
 				<option value="4" >اداری-مطب-دفتر</option>
 				<option value="5" >تجاری-پاساژ-مغازه</option>
 				<option value="6" >سوله-کارگاه-کارخانه</option>
-				<option value="7" >چهاردیواری</option>
+
 				<option value="8" >باغ-زمین کشاورزی</option>
 				<option value="9" >دامداری-دامپروری</option>
 

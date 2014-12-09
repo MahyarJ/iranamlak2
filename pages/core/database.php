@@ -1,5 +1,7 @@
 <?php
 
+// require_once 'config.php';
+
 $config['dbh'] = 'localhost';
 $config['dbu'] = 'root';
 $config['dbp'] = '';

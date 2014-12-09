@@ -2,7 +2,7 @@
 
 	<div class="bg">
 
-		<div class="footer-tab">عضویت / ورود / درج آگهی</div>
+		<div class="footer-tab">عضویت / ورود </div>
 
 	</div>
 

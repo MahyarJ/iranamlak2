@@ -28,7 +28,7 @@ function getAllTheZones($cityID)
 
 	$zones_result = doquery($query);
 
-	$resultarray = [];
+	$resultarray = array();
 
 	if ($zones_result){
 

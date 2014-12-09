@@ -28,7 +28,7 @@ function getAllTheCities($stateID)
 
 	$cities_result = doquery($query);
 
-	$resultarray = [];
+	$resultarray = array();
 
 	if ($cities_result){
 

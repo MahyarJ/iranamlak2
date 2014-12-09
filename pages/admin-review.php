@@ -24,9 +24,9 @@
 
 		$start = ($page - 1) * $count;
 
-		$totalCount = doquery($searchQuery->buildCountQuery());
+		$totalCount = fetch(doquery($searchQuery->buildCountQuery()));
 
-		$totalCountInt = (0 + ($totalCount->fetch_assoc()['count']));
+		$totalCountInt = (0 + $totalCount['count']);
 
 		if ($start >= $totalCountInt)
 		{
