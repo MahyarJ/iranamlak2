@@ -1,6 +1,6 @@
 <div class="result-item">
 
-	<div class="result-item-my-estates">تمام آگهی های تایید نشده</div>
+	<div class="result-item-my-estates">آگـــهی هـای تایید نشــده</div>
 
 	<?php
 

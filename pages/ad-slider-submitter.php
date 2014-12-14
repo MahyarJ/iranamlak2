@@ -1,4 +1,4 @@
-<?php
+w<?php
 
 	include_once 'post-data.php';
 

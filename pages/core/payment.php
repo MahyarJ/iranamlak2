@@ -7,7 +7,7 @@ function gotoParsian () {
 
   include("nusoap/nusoap.php");
 
-  $soapclient = new soapclient('https://www.pec24.com/pecpaymentgateway/eshopservice.asmx?wsdl','wsdl');
+  $soapclient = new soapclient('https://pec24.shaparak.com/pecpaymentgateway/eshopservice.asmx?wsdl','wsdl');
 
   if (!$err = $soapclient->getError())
    $soapProxy = $soapclient->getProxy() ;
@@ -48,7 +48,7 @@ function gotoParsian () {
 	   ...
 	   ...
 
-	   $parsURL = "https://www.pec24.com/pecpaymentgateway/?au=" . $authority ;
+	   $parsURL = "https://pec24.shaparak.com/pecpaymentgateway/?au=" . $authority ;
        redirectToURL ($parsURL) ;
 
 	   exit() ;
