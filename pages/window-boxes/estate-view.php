@@ -55,7 +55,7 @@
 		</span>
 
 
-		<span class="window-item" data-not-support-estate="[2,8,9]">
+		<span class="window-item" data-not-support-estate="[2,7,8]">
 
 			<div class="item-title">تعداد اتاق:</div>
 
@@ -64,7 +64,7 @@
 		</span>
 
 
-		<span class="window-item" data-not-support-estate="[2,8,9]">
+		<span class="window-item" data-not-support-estate="[2,7,8]">
 
 			<div class="item-title">طبقه:</div>
 
@@ -73,7 +73,7 @@
 		</span>
 
 
-		<span class="window-item" data-not-support-estate="[2,8,9]">
+		<span class="window-item" data-not-support-estate="[2,7,8]">
 
 			<div class="item-title">کف پوش:</div>
 
@@ -82,7 +82,7 @@
 		</span>
 
 
-		<span class="window-item" data-not-support-estate="[2,8,9]">
+		<span class="window-item" data-not-support-estate="[2,7,8]">
 
 			<div class="item-title">نوع نما:</div>
 
@@ -120,7 +120,7 @@
 
 		</div>
 
-		<div class="window-item"  data-not-support-estate="[1,2,3,4,6,7,8,9]">
+		<div class="window-item"  data-not-support-estate="[1,2,3,4,6,7,8]">
 
 			<span class="item-title">وضعیت:</span>
 

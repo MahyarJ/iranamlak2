@@ -84,6 +84,12 @@
 
 	}
 
-	header("Location: index.php?signin=ok");
+	if ($user['type'] == '0')
+
+		header("Location: index.php?signin=ok&panel=my-estates");
+
+	else if ($user['type'] == '5')
+
+		header("Location: index.php?signin=ok&panel=review");
 
 ?>

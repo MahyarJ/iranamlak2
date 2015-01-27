@@ -16,7 +16,7 @@ $mainColor: #EB2A10
 		top: 0
 		left: 0
 		right: 0
-		background-color: $mainColor
+		background-color: #360303
 		opacity: .85
 
 	.logo
@@ -36,17 +36,17 @@ $mainColor: #EB2A10
 	color: #FFF
 	line-height: 60px
 	padding: 8px 20px
-	background: lighten(#2a52b1, 5)
+	background: #9E0B0F
 	font-size: 18px
-	cursor: default
+	cursor: pointer
 	@include transition(all .4s)
-	@include box-shadow(2px 2px 8px 0px #333 inset)
+	// @include box-shadow(2px 2px 8px 0px #333 inset)
 
 	&:hover
 
-		background: #2a52b1
-		color: lighten($mainColor, 10)
-		@include box-shadow(3px 3px 8px 1px #111 inset)
+		background: lighten(#9E0B0F, 8)
+		// color:
+		// @include box-shadow(2px 2px 8px 1px #333 inset)
 
 	p
 
@@ -81,7 +81,8 @@ ul.right-menu
 
 		&:hover
 
-			background: lighten($mainColor, 10)
+			background: #EEE
+			color: black
 
 	.selected
 

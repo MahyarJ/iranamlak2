@@ -12,7 +12,7 @@ class SearchQuery{
 
 		$this->queryCountStart = "SELECT COUNT(*) AS count FROM `$table` WHERE";
 
-		$this->cols = [];
+		$this->cols = array();
 
 	}
 

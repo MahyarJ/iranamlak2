@@ -24,15 +24,15 @@ function getStateName($id)
 function getAllTheStates()
 {
 
-	$query = "SELECT * FROM `states` WHERE 1";
+	$query = "SELECT * FROM `states`";
 
 	$state_result = doquery($query);
 
-	$resultarray = [];
+	$resultarray = array();
 
 	if ($state_result){
 
-		for ($i = 0; $i < mysqli_num_rows($state_result); $i++){
+		for ($i = 0; $i < rows($state_result); $i++){
 
 			$resultarray[] = fetch($state_result);
 

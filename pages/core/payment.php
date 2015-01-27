@@ -1,12 +1,14 @@
 <?php
 
+// This file edited by Mahyar Jamalabadi
 
 //  this function is to get proper authority key from Parsian
 function gotoParsian () {
 
   include("nusoap/nusoap.php");
 
-  $soapclient = new soapclient('https://www.pec24.com/pecpaymentgateway/eshopservice.asmx?wsdl','wsdl');
+  $soapclient = new soapclient('https://pec24.shaparak.com/pecpaymentgateway/eshopservice.asmx?wsdl','wsdl');
+
   if (!$err = $soapclient->getError())
    $soapProxy = $soapclient->getProxy() ;
 
@@ -17,6 +19,8 @@ function gotoParsian () {
 
   } else {
 
+  	$gateID = 'i22xGhaQ001XnjA32O26';
+
     $amount = intval($_POST['Amount']) ;  // here is the posted amount
 	$orderId = getResNum( .... ) ; // this function is internal which will get order id
 	$authority = 0 ;  // default authority
@@ -24,7 +28,7 @@ function gotoParsian () {
     $callbackUrl = "payment/paid_parsian/" ; // site call back Url
 
     $params = array(
-	 			'pin' => ... ,  // this is our PIN NUMBER
+	 			'pin' => $gateID ,  // this is our PIN NUMBER
                 'amount' => $amount,
                 'orderId' => $orderId,
 				'callbackUrl' => $callbackUrl,
@@ -44,7 +48,7 @@ function gotoParsian () {
 	   ...
 	   ...
 
-	   $parsURL = "https://www.pec24.com/pecpaymentgateway/?au=" . $authority ;
+	   $parsURL = "https://pec24.shaparak.com/pecpaymentgateway/?au=" . $authority ;
        redirectToURL ($parsURL) ;
 
 	   exit() ;

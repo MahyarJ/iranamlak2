@@ -203,7 +203,7 @@ if (isset($_GET['id']))
 
 				<?php
 
-					$estateTypes = array("-- نوع ملک را انتخاب نمایید  --", "خانه-ویلا" , "زمین", "آپارتمان", "اداری-مطب-دفتر", "تجاری-پاساژ-مغازه", "سوله-کارگاه-کارخانه", "چهاردیواری", "باغ-زمین کشاورزی", "دامداری-دامپروری");
+					$estateTypes = array("-- نوع ملک را انتخاب نمایید  --", "خانه-ویلا" , "زمین", "آپارتمان", "اداری-مطب-دفتر", "تجاری-پاساژ-مغازه", "سوله-کارگاه-کارخانه", "باغ-زمین کشاورزی", "دامداری-دامپروری");
 
 					if ($resultarray != null)
 
@@ -220,7 +220,6 @@ if (isset($_GET['id']))
 						printOptionById($i, $estateTypes);
 
 					}
-
 				?>
 
 			</select>
@@ -251,7 +250,7 @@ if (isset($_GET['id']))
 
 			</select>
 
-			<div class="item" data-not-support-estate="[2,8,9]">
+			<div class="item" data-not-support-estate="[2,7,8]">
 
 				<select name="nama" style="width: 340px" id="view">
 
@@ -305,15 +304,15 @@ if (isset($_GET['id']))
 
 				<input name="zamin" class="text" type="text" <?php if ($resultarray != null) echo "value=\"" . $resultarray['zamin'] . "\""; ?>><span class="tag">مترمربع</span>
 
-				<label data-not-support-estate="[2,8,9]">زیربنــا: </label>
+				<label data-not-support-estate="[2,7,8]">زیربنــا: </label>
 
-				<input name="zirbana" class="text" type="text" data-not-support-estate="[2,8,9]" <?php if ($resultarray != null) echo "value=\"" . $resultarray['zirbana'] . "\""; ?>><span class="tag">مترمربع</span>
+				<input name="zirbana" class="text" type="text" data-not-support-estate="[2,7,8]" <?php if ($resultarray != null) echo "value=\"" . $resultarray['zirbana'] . "\""; ?>><span class="tag">مترمربع</span>
 
 			</div>
 
 			<div class="item">
 
-				<select name="floor" style="width: 100px" id="floor-number" data-not-support-estate="[2,7,8,9]">
+				<select name="floor" style="width: 100px" id="floor-number" data-not-support-estate="[2,7,8]">
 
 					<?php
 
@@ -339,7 +338,7 @@ if (isset($_GET['id']))
 
 				</select>
 
-				<select name="room" style="width: 100px" data-not-support-estate="[2,8,9]">
+				<select name="room" style="width: 100px" data-not-support-estate="[2,7,8]">
 
 					<?php
 
@@ -365,7 +364,7 @@ if (isset($_GET['id']))
 
 				</select>
 
-				<select name="kafpoosh" style="width: 150px" data-not-support-estate="[2,8,9]">
+				<select name="kafpoosh" style="width: 150px" data-not-support-estate="[2,7,8]">
 
 					<?php
 
@@ -440,7 +439,7 @@ if (isset($_GET['id']))
 
 			?>
 
-			<div class="item" data-not-support-estate="[2,8]">
+			<div class="item" data-not-support-estate="[2,7]">
 
 				<h2>امکانات گرمایشی / سرمایشی: </h2>
 
@@ -464,7 +463,7 @@ if (isset($_GET['id']))
 
 			</div>
 
-			<div class="item" data-not-support-estate="[2,8]">
+			<div class="item" data-not-support-estate="[2,7]">
 
 				<h2>فضاهای موجود: </h2>
 
@@ -490,7 +489,7 @@ if (isset($_GET['id']))
 
 			</div>
 
-			<div class="item" data-not-support-estate="[2,6,8,9]">
+			<div class="item" data-not-support-estate="[2,6,7,8]">
 
 				<h2>امکانات: </h2>
 
@@ -510,13 +509,13 @@ if (isset($_GET['id']))
 
 					<li <?php echo getClass(21, $options); ?> data-not-support-estate="[4,5]"><input class="dom-radio" <?php echo getChecked(21, $options); ?> name="jakoozi" type="radio">جکوزی</li>
 
-					<li <?php echo getClass(22, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(22, $options); ?> name="donabsh" type="radio">دو نبش</li>
+					<li <?php echo getClass(22, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8]"><input class="dom-radio" <?php echo getChecked(22, $options); ?> name="donabsh" type="radio">دو نبش</li>
 
-					<li <?php echo getClass(23, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(23, $options); ?> name="barmeidan" type="radio">بر میدان</li>
+					<li <?php echo getClass(23, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8]"><input class="dom-radio" <?php echo getChecked(23, $options); ?> name="barmeidan" type="radio">بر میدان</li>
 
-					<li <?php echo getClass(24, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(24, $options); ?> name="dakhelkuche" type="radio">داخل کوچه</li>
+					<li <?php echo getClass(24, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8]"><input class="dom-radio" <?php echo getChecked(24, $options); ?> name="dakhelkuche" type="radio">داخل کوچه</li>
 
-					<li <?php echo getClass(25, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(25, $options); ?> name="dakhelpasaj" type="radio">داخل پاساژ</li>
+					<li <?php echo getClass(25, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8]"><input class="dom-radio" <?php echo getChecked(25, $options); ?> name="dakhelpasaj" type="radio">داخل پاساژ</li>
 
 				</ul>
 
