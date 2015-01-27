@@ -39,6 +39,10 @@ $mainColor: #EB2A10
 
 			color: $mainColor
 
+	&:hover .edit
+
+		visibility: visible
+
 	.date
 
 		height: 30px
@@ -120,5 +124,33 @@ $mainColor: #EB2A10
 
 
 
+	.edit
 
 
+		position: absolute
+		top: 5px
+		right: 5px
+
+		visibility: hidden
+
+
+
+		input
+
+			width: 100px
+			height: 40px
+			background-color: #db1a00
+
+			border: 0
+
+			cursor: pointer
+
+			-webkit-transition: .4s background-color
+			-moz-transition: .4s background-color
+			-ms-transition: .4s background-color
+			-o-transition: .4s background-color
+			transition: .4s background-color
+
+			&:hover
+
+				background-color: #ef2e16

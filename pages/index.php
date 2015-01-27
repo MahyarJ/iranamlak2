@@ -67,9 +67,9 @@
 
 							case 'search':
 
-								require_once 'search-content.php';
+								require_once './search-content.php';
 
-								require_once 'search-result.php';
+								require_once './search-result.php';
 
 								break;
 

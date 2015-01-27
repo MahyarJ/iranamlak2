@@ -1,20 +1,30 @@
 do estateOnClick = ->
 
-	$('.estate-item').click ->
+	$('.estate-item').click (event) ->
 
-		loadEstate $(this).attr('id')
+		if event.target.id is "edit-estate"
 
-		$('.estate-view').css
+			form = "<form method=\"GET\" action=\"index.php\">
+				<input type=\"hidden\" name=\"panel\" value=\"add\">
+				<input type=\"hidden\" name=\"id\" value=\"#{event.target.parentNode.parentNode.id}\">
+			</form>"
 
-			'visibility': 'visible'
+			$(form).appendTo('body').submit()
+
+		else
+
+			loadEstate $(this).attr('id')
+
+			$('.estate-view').css
+
+				'visibility': 'visible'
 
 
-		$('.window').css
+			$('.window').css
 
-			'visibility': 'visible',
+				'visibility': 'visible',
 
-			'opacity': 1
-
+				'opacity': 1
 
 
 	# $('.news-list-item').click ->

@@ -1,8 +1,53 @@
 <?php
 
-$query = "SELECT * FROM `states`";
 
-$state_result = doquery($query);
+function printOptionById($id, $array)
+{
+	$opt = $array[$id];
+
+	if ($id == 0) $id = "none";
+
+	echo "<option value=\"$id\">$opt</option>";
+}
+
+function printOption($opt)
+{
+	echo "<option>$opt</option>";
+}
+
+$id = -1;
+$resultarray = null;
+
+if (isset($_GET['id']))
+{
+
+	$id = $_GET['id'];
+
+	include_once 'core/database.php';
+	include_once 'search-query.php';
+	include_once 'database/states.php';
+	include_once 'database/cities.php';
+	include_once 'database/zone.php';
+	include_once 'generate-estate-row.php';
+
+	$searchQuery = new SearchQuery('estate');
+
+	if ($_SESSION['uid']){
+
+		$searchQuery->simple('uid', $_SESSION['uid']);
+
+	}
+
+	$searchQuery->simple('id', $id);
+
+	$result = doquery($searchQuery->buildQuery());
+
+	if ($result){
+
+		$resultarray = fetch($result);
+
+	}
+}
 
 ?>
 <div class="add-content">
@@ -17,36 +62,130 @@ $state_result = doquery($query);
 
 				<select class="location-select" id="state-combobox">
 
-					<option value="none">-- همه استانها --</option>
-
 					<?php
+						if ($resultarray != null){
 
-					if ($state_result){
+							$state = getStateName($resultarray['state']);
+							$stateId = $resultarray['state'];
 
-						for ($i = 0; $i < mysqli_num_rows($state_result); $i++){
+							echo "<option value=\"$stateId\">$state</option>";
 
-							$state_resultArray = fetch($state_result);
+							$query = "SELECT * FROM `states`";
 
-							echo "<option value=\"" . $state_resultArray['id'] . "\">" . $state_resultArray['name'] . "</option>";
+							$state_result = doquery($query);
+
+							if ($state_result){
+
+								for ($i = 0; $i < mysqli_num_rows($state_result); $i++){
+
+									$state_resultArray = fetch($state_result);
+
+									if ($state_resultArray['id'] == $stateId) continue;
+
+									echo "<option value=\"" . $state_resultArray['id'] . "\">" . $state_resultArray['name'] . "</option>";
+
+								}
+							}
+
+						} else {
+
+							echo "<option value=\"none\">-- همه استانها --</option>";
+
+							$query = "SELECT * FROM `states`";
+
+							$state_result = doquery($query);
+
+							if ($state_result){
+
+								for ($i = 0; $i < mysqli_num_rows($state_result); $i++){
+
+									$state_resultArray = fetch($state_result);
+
+									echo "<option value=\"" . $state_resultArray['id'] . "\">" . $state_resultArray['name'] . "</option>";
+
+								}
+							}
 
 						}
-					}
-
-
 					?>
 
 				</select>
 
 				<select class="location-select" name="city" id="city-combobox">
 
-					<option value="none">-- همه شهرها --</option>
+					<?php
+						if ($resultarray != null){
+
+							$stateId = $resultarray['state'];
+
+							$city = getCityName($resultarray['city']);
+							$cityId = $resultarray['city'];
+
+							echo "<option value=\"$cityId\">$city</option>";
+
+							$query = "SELECT * FROM `cities` where `state_id` = '$stateId'";
+
+							$city_result = doquery($query);
+
+							if ($city_result){
+
+								for ($i = 0; $i < mysqli_num_rows($city_result); $i++){
+
+									$city_resultArray = fetch($city_result);
+
+									if ($city_resultArray['id'] == $cityId) continue;
+
+									echo "<option value=\"" . $city_resultArray['id'] . "\">" . $city_resultArray['name'] . "</option>";
+
+								}
+							}
+
+						} else {
+
+							echo "<option value=\"none\">-- همه شهرها --</option>";
+
+						}
+					?>
+
+
 
 				</select>
 
 				<select class="location-select" name="zone" id="zone-combobox">
 
-					<option value="none">-- همه مناطق --</option>
+					<?php
+						if ($resultarray != null){
 
+							$cityId = $resultarray['city'];
+
+							$zone = getZoneName($resultarray['zone']);
+							$zoneId = $resultarray['zone'];
+
+							echo "<option value=\"$zoneId\">$zone</option>";
+
+							$query = "SELECT * FROM `cities` where `city_id` = '$stateId'";
+
+							$zone_result = doquery($query);
+
+							if ($zone_result){
+
+								for ($i = 0; $i < mysqli_num_rows($zone_result); $i++){
+
+									$zone_resultArray = fetch($zone_result);
+
+									if ($zone_resultArray['id'] == $zoneId) continue;
+
+									echo "<option value=\"" . $zone_resultArray['id'] . "\">" . $zone_resultArray['name'] . "</option>";
+
+								}
+							}
+
+						} else {
+
+							echo "<option value=\"none\">-- همه مناطق --</option>";
+
+						}
+					?>
 
 				</select>
 
@@ -54,7 +193,7 @@ $state_result = doquery($query);
 
 					<h2>آدرس: </h2>
 
-					<input style="width: 635px" name="address" class="text" type="text">
+					<input style="width: 635px" name="address" class="text" type="text" <?php if ($resultarray != null) echo "value=\"" . $resultarray['address'] . "\""; ?> >
 
 				</div>
 
@@ -62,29 +201,53 @@ $state_result = doquery($query);
 
 			<select name="estate-type" style="width: 340px" id="estate-kind">
 
-				<option value="-1">-- نوع ملک را انتخاب نمایید  --</option>
+				<?php
 
-				<option value="1" >خانه-ویلا</option>
-				<option value="2" >زمین</option>
-				<option value="3" >آپارتمان</option>
-				<option value="4" >اداری-مطب-دفتر</option>
-				<option value="5" >تجاری-پاساژ-مغازه</option>
-				<option value="6" >سوله-کارگاه-کارخانه</option>
-				<option value="7" >چهاردیواری</option>
-				<option value="8" >باغ-زمین کشاورزی</option>
-				<option value="9" >دامداری-دامپروری</option>
+					$estateTypes = array("-- نوع ملک را انتخاب نمایید  --", "خانه-ویلا" , "زمین", "آپارتمان", "اداری-مطب-دفتر", "تجاری-پاساژ-مغازه", "سوله-کارگاه-کارخانه", "چهاردیواری", "باغ-زمین کشاورزی", "دامداری-دامپروری");
+
+					if ($resultarray != null)
+
+						printOptionById((int) $resultarray['estate_type'], $estateTypes);
+
+					else
+
+						printOptionById(0, $estateTypes);
+
+					for ($i=1; $i < count($estateTypes); $i++) {
+
+						if ($i == (int) $resultarray['estate_type']) continue;
+
+						printOptionById($i, $estateTypes);
+
+					}
+
+				?>
 
 			</select>
 
 			<select name="deal-type" style="width: 340px" id="deal-kind">
 
-				<option value="-1">-- نوع معامله را انتخاب نمایید --</option>
+				<?php
 
-				<option value="1">رهن و اجاره</option>
-				<option value="2">خرید و فروش</option>
-				<option value="3">پیش فروش</option>
-				<option value="4">مشارکت</option>
-				<option value="5">معاوضه</option>
+					$dealTypes = array("-- نوع معامله را انتخاب نمایید --", "رهن و اجاره", "خرید و فروش", "پیش فروش", "مشارکت", "معاوضه");
+
+					if ($resultarray != null)
+
+						printOptionById((int) $resultarray['deal_type'], $dealTypes);
+
+					else
+
+						printOptionById(0, $dealTypes);
+
+					for ($i=1; $i < count($dealTypes); $i++) {
+
+						if ($i == (int) $resultarray['deal_type']) continue;
+
+						printOptionById($i, $dealTypes);
+
+					}
+
+				?>
 
 			</select>
 
@@ -92,30 +255,27 @@ $state_result = doquery($query);
 
 				<select name="nama" style="width: 340px" id="view">
 
-					<option>-- نما --</option>
+					<?php
 
-					<option>آجر</option>
-					<option>آلومينيوم</option>
-					<option>سراميک</option>
-					<option>آجر سه سانت</option>
-					<option>گرانيت</option>
-					<option>کنيتکس</option>
-					<option>کنيتکس و رومي</option>
-					<option>تراورتن</option>
-					<option>شيشه</option>
-					<option>سنگ</option>
-					<option>سنگ و رومي</option>
-					<option>سنگ و شيشه</option>
-					<option>رفلکس</option>
-					<option>کلاسيک</option>
-					<option>سيمان</option>
-					<option>آلومينيوم و شيشه</option>
-					<option>رومي</option>
-					<option>سيمان و شيشه</option>
-					<option>کامپوزيت</option>
-					<option>رومالین</option>
-					<option>سفال</option>
-					<option>ترکیبی</option>
+						$namaTypes = array("-- نما --", "آجر","آلومينيوم","سراميک","آجر سه سانت","گرانيت","کنيتکس","کنيتکس و رومي","تراورتن","شيشه","سنگ","سنگ و رومي","سنگ و شيشه","رفلکس","کلاسيک","سيمان","آلومينيوم و شيشه","رومي","سيمان و شيشه","کامپوزيت","رومالین","سفال","ترکیبی");
+
+						if ($resultarray != null)
+
+							printOption($resultarray['nama']);
+
+						else
+
+							printOption($namaTypes[0]);
+
+						for ($i=1; $i < count($namaTypes); $i++) {
+
+							if ($namaTypes[$i] == $resultarray['nama']) continue;
+
+							printOption($namaTypes[$i]);
+
+						}
+
+					?>
 
 				</select>
 
@@ -131,11 +291,11 @@ $state_result = doquery($query);
 
 				<label>قیمت متری: </label>
 
-				<input name="unit-price" class="text" type="text"><span class="tag">تومـــــــــان</span>
+				<input name="unit-price" class="text" type="text" <?php if ($resultarray != null) echo "value=\"" . $resultarray['unit_price'] . "\""; ?>><span class="tag">تومـــــــــان</span>
 
 				<label>قیمت ملک: </label>
 
-				<input name="total-price" class="text" type="text"><span class="tag">تومـــــــــان</span>
+				<input name="total-price" class="text" type="text" <?php if ($resultarray != null) echo "value=\"" . $resultarray['total_price'] . "\""; ?>><span class="tag">تومـــــــــان</span>
 
 			</div>
 
@@ -143,11 +303,11 @@ $state_result = doquery($query);
 
 				<label>مساحت زمین: </label>
 
-				<input name="zamin" class="text" type="text"><span class="tag">مترمربع</span>
+				<input name="zamin" class="text" type="text" <?php if ($resultarray != null) echo "value=\"" . $resultarray['zamin'] . "\""; ?>><span class="tag">مترمربع</span>
 
 				<label data-not-support-estate="[2,8,9]">زیربنــا: </label>
 
-				<input name="zirbana" class="text" type="text" data-not-support-estate="[2,8,9]"><span class="tag">مترمربع</span>
+				<input name="zirbana" class="text" type="text" data-not-support-estate="[2,8,9]" <?php if ($resultarray != null) echo "value=\"" . $resultarray['zirbana'] . "\""; ?>><span class="tag">مترمربع</span>
 
 			</div>
 
@@ -155,97 +315,79 @@ $state_result = doquery($query);
 
 				<select name="floor" style="width: 100px" id="floor-number" data-not-support-estate="[2,7,8,9]">
 
-					<option>- طبقه -</option>
+					<?php
 
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
+						$floor = array("-- طبقه --", "1", "2" ,"3" ,"4" ,"5" ,"6");
+
+						if ($resultarray != null)
+
+							printOption($resultarray['floor']);
+
+						else
+
+							printOption($floor[0]);
+
+						for ($i=1; $i < count($floor); $i++) {
+
+							if ($floor[$i] == $resultarray['floor']) continue;
+
+							printOption($floor[$i]);
+
+						}
+
+					?>
 
 				</select>
 
 				<select name="room" style="width: 100px" data-not-support-estate="[2,8,9]">
 
-					<option>- اتاق -</option>
+					<?php
 
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
+						$room = array("-- طبقه --", "1", "2" ,"3" ,"4" ,"5" ,"6");
+
+						if ($resultarray != null)
+
+							printOption($resultarray['room']);
+
+						else
+
+							printOption($room[0]);
+
+						for ($i=1; $i < count($room); $i++) {
+
+							if ($room[$i] == $resultarray['room']) continue;
+
+							printOption($room[$i]);
+
+						}
+
+					?>
 
 				</select>
 
 				<select name="kafpoosh" style="width: 150px" data-not-support-estate="[2,8,9]">
 
-					<option>- نوع کفپوش -</option>
+					<?php
 
-					<option>نا مشخص</option>
-					<option>پارکت</option>
-					<option>سراميک</option>
-					<option>سنگ</option>
-					<option>موکت</option>
-					<option>پارکت سنگ</option>
-					<option>تکسرام</option>
-					<option>سنگ سراميک</option>
-					<option>موزائيک</option>
-					<option>موزائيک سنگ</option>
-					<option>موکت پارکت</option>
-					<option>موکت سراميک</option>
-					<option>HDF</option>
-					<option>HPF</option>
-					<option>PVC</option>
-					<option>TVC</option>
-					<option>آجر</option>
-					<option>آکواريوم</option>
-					<option>بتون</option>
-					<option>برنز</option>
-					<option>پارکت سراميک</option>
-					<option>پارکت موزائيک</option>
-					<option>پارکت کفپوش</option>
-					<option>تکسرام پارکت</option>
-					<option>تکسرام سنگ</option>
-					<option>تکسرام و برنز</option>
-					<option>چوبي</option>
-					<option>دلخواه</option>
-					<option>سراميک برنز</option>
-					<option>سراميک موزائيک</option>
-					<option>سنگ برنز</option>
-					<option>سنگ دهبيد</option>
-					<option>سنگ سيمان</option>
-					<option>سنگ گرانيت</option>
-					<option>سنگ موزائيک</option>
-					<option>سنگ مکالئوم</option>
-					<option>سيمان</option>
-					<option>سيمان سراميک</option>
-					<option>سيمان موزائيک</option>
-					<option>شيشه</option>
-					<option>فوم</option>
-					<option>گرانيت</option>
-					<option>گرانيت سراميک</option>
-					<option>گرانيت سنگ</option>
-					<option>گرانيت موکت</option>
-					<option>لامنيت</option>
-					<option>موزائيک پارکت</option>
-					<option>موزائيک سراميک</option>
-					<option>موزائيک موکت</option>
-					<option>موزائيک کاشي</option>
-					<option>موکت تکسرام</option>
-					<option>موکت سنگ</option>
-					<option>موکت مکالئوم</option>
-					<option>مکالئوم</option>
-					<option>مکالئوم سراميک</option>
-					<option>مکالئوم سنگ</option>
-					<option>مکالئوم موکت</option>
-					<option>کاشي</option>
-					<option>کاشي سراميک</option>
-					<option>کاشي سنگ</option>
-					<option>کاشي موکت</option>
-					<option>کف پوش سنگ</option>
-					<option>کفپوش</option>
+						$kafpoosh = array("-- نوع کفپوش --" , "نا مشخص", "پارکت", "سراميک", "سنگ", "موکت", "پارکت سنگ", "تکسرام", "سنگ سراميک", "موزائيک", "موزائيک سنگ", "موکت پارکت", "موکت سراميک", "HDF", "HPF", "PVC", "TVC", "آجر", "آکواريوم", "بتون", "برنز", "پارکت سراميک", "پارکت موزائيک", "پارکت کفپوش", "تکسرام پارکت", "تکسرام سنگ", "تکسرام و برنز", "چوبي", "دلخواه", "سراميک برنز", "سراميک موزائيک", "سنگ برنز", "سنگ دهبيد", "سنگ سيمان", "سنگ گرانيت", "سنگ موزائيک", "سنگ مکالئوم", "سيمان", "سيمان سراميک", "سيمان موزائيک", "شيشه", "فوم", "گرانيت", "گرانيت سراميک", "گرانيت سنگ", "گرانيت موکت", "لامنيت", "موزائيک پارکت", "موزائيک سراميک", "موزائيک موکت", "موزائيک کاشي", "موکت تکسرام", "موکت سنگ", "موکت مکالئوم", "مکالئوم", "مکالئوم سراميک", "مکالئوم سنگ", "مکالئوم موکت", "کاشي", "کاشي سراميک", "کاشي سنگ", "کاشي موکت", "کف پوش سنگ", "کفپوش");
+
+						if ($resultarray != null)
+
+							printOption($resultarray['kafpoosh']);
+
+						else
+
+							printOption($kafpoosh[0]);
+
+						for ($i=1; $i < count($kafpoosh); $i++) {
+
+							if ($kafpoosh[$i] == $resultarray['kafpoosh']) continue;
+
+							printOption($kafpoosh[$i]);
+
+						}
+
+					?>
 
 				</select>
 
@@ -257,25 +399,66 @@ $state_result = doquery($query);
 
 		<div class="options-def">
 
+			<?php
+
+				$options = null;
+
+				if ($resultarray != null)
+
+					$options = $resultarray["options"];
+
+				function getRadioValue($id, $options)
+				{
+
+					if ($options != null)
+
+						if ($options[$id] == "1")
+
+							return true;
+
+					return false;
+
+				}
+
+				function getClass($id, $options)
+				{
+					if (getRadioValue($id, $options))
+
+						return "class=\"mj-radio selected\"";
+
+					return "class=\"mj-radio\"";
+				}
+
+				function getChecked($id, $options)
+				{
+					if (getRadioValue($id, $options))
+
+						return " checked";
+
+					return "";
+				}
+
+			?>
+
 			<div class="item" data-not-support-estate="[2,8]">
 
 				<h2>امکانات گرمایشی / سرمایشی: </h2>
 
 				<ul class="mj-radiogroup">
 
-					<li class="mj-radio"><input class="dom-radio" name="shofaj" type="radio">شوفاژ</li>
+					<li <?php echo getClass(0, $options); ?>><input class="dom-radio" <?php echo getChecked(0, $options); ?> name="shofaj" type="radio">شوفاژ</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="pakage" type="radio">پکیج</li>
+					<li <?php echo getClass(1, $options); ?>><input class="dom-radio" <?php echo getChecked(1, $options); ?> name="pakage" type="radio">پکیج</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="bokhari" type="radio">بخاری/گاز</li>
+					<li <?php echo getClass(2, $options); ?>><input class="dom-radio" <?php echo getChecked(2, $options); ?> name="bokhari" type="radio">بخاری/گاز</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="kooler" type="radio">کولر</li>
+					<li <?php echo getClass(3, $options); ?>><input class="dom-radio" <?php echo getChecked(3, $options); ?> name="kooler" type="radio">کولر</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="split" type="radio">اسپیلت</li>
+					<li <?php echo getClass(4, $options); ?>><input class="dom-radio" <?php echo getChecked(4, $options); ?> name="split" type="radio">اسپیلت</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="chiler" type="radio">چیلر</li>
+					<li <?php echo getClass(5, $options); ?>><input class="dom-radio" <?php echo getChecked(5, $options); ?> name="chiler" type="radio">چیلر</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="fankoel" type="radio">فن کوئل</li>
+					<li <?php echo getClass(6, $options); ?>><input class="dom-radio" <?php echo getChecked(6, $options); ?> name="fankoel" type="radio">فن کوئل</li>
 
 				</ul>
 
@@ -287,21 +470,21 @@ $state_result = doquery($query);
 
 				<ul class="mj-radiogroup">
 
-					<li class="mj-radio"><input class="dom-radio" name="labi" type="radio">لابی</li>
+					<li <?php echo getClass(7, $options); ?>><input class="dom-radio" <?php echo getChecked(7, $options); ?> name="labi" type="radio">لابی</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="hayat" type="radio">حیاط</li>
+					<li <?php echo getClass(8, $options); ?>><input class="dom-radio" <?php echo getChecked(8, $options); ?> name="hayat" type="radio">حیاط</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="hayatkhalvat" type="radio">حیاط خلوت</li>
+					<li <?php echo getClass(9, $options); ?>><input class="dom-radio" <?php echo getChecked(9, $options); ?> name="hayatkhalvat" type="radio">حیاط خلوت</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="anbari" type="radio">انباری</li>
+					<li <?php echo getClass(10, $options); ?>><input class="dom-radio" <?php echo getChecked(10, $options); ?> name="anbari" type="radio">انباری</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="balkon" type="radio">بالکن</li>
+					<li <?php echo getClass(11, $options); ?>><input class="dom-radio" <?php echo getChecked(11, $options); ?> name="balkon" type="radio">بالکن</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="zirzamin" type="radio">زیر زمین</li>
+					<li <?php echo getClass(12, $options); ?>><input class="dom-radio" <?php echo getChecked(12, $options); ?> name="zirzamin" type="radio">زیر زمین</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="parking" type="radio">پارکینگ</li>
+					<li <?php echo getClass(13, $options); ?>><input class="dom-radio" <?php echo getChecked(13, $options); ?> name="parking" type="radio">پارکینگ</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="pasio" type="radio">پاسیو</li>
+					<li <?php echo getClass(14, $options); ?>><input class="dom-radio" <?php echo getChecked(14, $options); ?> name="pasio" type="radio">پاسیو</li>
 
 				</ul>
 
@@ -313,27 +496,27 @@ $state_result = doquery($query);
 
 				<ul class="mj-radiogroup">
 
-					<li class="mj-radio" data-not-support-estate="[4]"><input class="dom-radio" name="open" type="radio">آشپزخانه اوپن</li>
+					<li <?php echo getClass(15, $options); ?> data-not-support-estate="[4]"><input class="dom-radio" <?php echo getChecked(15, $options); ?> name="open" type="radio">آشپزخانه اوپن</li>
 
-					<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="asansor" type="radio">آسانسور</li>
+					<li <?php echo getClass(16, $options); ?> data-not-support-estate="[5]"><input class="dom-radio" <?php echo getChecked(16, $options); ?> name="asansor" type="radio">آسانسور</li>
 
-					<li class="mj-radio" data-not-support-estate="[5]"><input class="dom-radio" name="mostakhdem" type="radio">مستخدم</li>
+					<li <?php echo getClass(17, $options); ?> data-not-support-estate="[5]"><input class="dom-radio" <?php echo getChecked(17, $options); ?> name="mostakhdem" type="radio">مستخدم</li>
 
-					<li class="mj-radio"><input class="dom-radio" name="seraydar" type="radio">سرایدار</li>
+					<li <?php echo getClass(18, $options); ?>><input class="dom-radio" <?php echo getChecked(18, $options); ?> name="seraydar" type="radio">سرایدار</li>
 
-					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="estakhr" type="radio">استخر</li>
+					<li <?php echo getClass(19, $options); ?> data-not-support-estate="[4,5]"><input class="dom-radio" <?php echo getChecked(19, $options); ?> name="estakhr" type="radio">استخر</li>
 
-					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="sona" type="radio">سونا</li>
+					<li <?php echo getClass(20, $options); ?> data-not-support-estate="[4,5]"><input class="dom-radio" <?php echo getChecked(20, $options); ?> name="sona" type="radio">سونا</li>
 
-					<li class="mj-radio" data-not-support-estate="[4,5]"><input class="dom-radio" name="jakoozi" type="radio">جکوزی</li>
+					<li <?php echo getClass(21, $options); ?> data-not-support-estate="[4,5]"><input class="dom-radio" <?php echo getChecked(21, $options); ?> name="jakoozi" type="radio">جکوزی</li>
 
-					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="donabsh" type="radio">دو نبش</li>
+					<li <?php echo getClass(22, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(22, $options); ?> name="donabsh" type="radio">دو نبش</li>
 
-					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="barmeidan" type="radio">بر میدان</li>
+					<li <?php echo getClass(23, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(23, $options); ?> name="barmeidan" type="radio">بر میدان</li>
 
-					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelkuche" type="radio">داخل کوچه</li>
+					<li <?php echo getClass(24, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(24, $options); ?> name="dakhelkuche" type="radio">داخل کوچه</li>
 
-					<li class="mj-radio" data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" name="dakhelpasaj" type="radio">داخل پاساژ</li>
+					<li <?php echo getClass(25, $options); ?> data-not-support-estate="[1,2,3,4,6,7,8,9]"><input class="dom-radio" <?php echo getChecked(25, $options); ?> name="dakhelpasaj" type="radio">داخل پاساژ</li>
 
 				</ul>
 

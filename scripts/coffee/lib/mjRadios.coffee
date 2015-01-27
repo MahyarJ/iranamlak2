@@ -25,7 +25,13 @@ uncheckMJRadio = (index) ->
 
 for i in [0...radios.length]
 
-	selectedIndexes[i] = 0
+	if domRadios[i].getAttribute("checked")?
+
+		selectedIndexes[i] = 1
+
+	else
+
+		selectedIndexes[i] = 0
 
 	__i = i
 

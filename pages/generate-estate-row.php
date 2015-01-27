@@ -1,6 +1,6 @@
 <?php
 
-function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, $city, $zone, $address, $estateId, $dealId){
+function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, $city, $zone, $address, $estateId, $dealId, $editable = false){
 
 	$estateType = '';
 
@@ -86,6 +86,16 @@ function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, 
 
 	}
 
+	$editButton = "";
+
+	if ($editable != false)
+	{
+
+		$editButton = "<div class=\"edit\"><input id=\"edit-estate\" type=\"submit\" value=\"ویرایش\"></form></div>";
+
+	}
+
+
 	$data = "
 
 		<div class=\"estate-item\" id=\"$id\">
@@ -117,6 +127,8 @@ function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, 
 			<div class=\"type-item\">$dealType</div>
 
 		</div>
+
+		$editButton
 
 	</div>
 	";

@@ -12,10 +12,13 @@ selectedZone  = 0
 
 type = ''
 
+if $('#city-combobox').children(0).val() is "none"
 
-$('#city-combobox').fadeOut("fast")
+	$('#city-combobox').fadeOut("fast")
 
-$('#zone-combobox').fadeOut("fast")
+if $('#zone-combobox').children(0).val() is "none"
+
+	$('#zone-combobox').fadeOut("fast")
 
 
 

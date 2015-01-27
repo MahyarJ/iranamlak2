@@ -1,7 +1,7 @@
 divs = $('[data-not-support-estate]')
-
 select = $ '#estate-kind'
-select.change (data) =>
+
+do removeUnwanted = ->
 
 	for div in divs
 
@@ -22,3 +22,5 @@ select.change (data) =>
 
 			$ div
 			.fadeIn()
+
+select.change removeUnwanted
