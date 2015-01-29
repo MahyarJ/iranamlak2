@@ -15,8 +15,24 @@ function printOption($opt)
 	echo "<option>$opt</option>";
 }
 
-$id = -1;
+function getPictureSrc($uid, $id, $num)
+{
+
+	if ($uid && $id)
+	{
+
+		$url = '../upld/' . $uid . '/' . $id . '/filename' . $num . '.jpg' ;
+
+		return "src=\"" . $url . "\"";
+	}
+
+	return "";
+
+}
+
+$id = null;
 $resultarray = null;
+$uid = $_SESSION['uid'];
 
 if (isset($_GET['id']))
 {
@@ -32,7 +48,7 @@ if (isset($_GET['id']))
 
 	$searchQuery = new SearchQuery('estate');
 
-	if ($_SESSION['uid']){
+	if ($uid){
 
 		$searchQuery->simple('uid', $_SESSION['uid']);
 
@@ -60,7 +76,7 @@ if (isset($_GET['id']))
 
 			<div class="add-location-item" id="state">
 
-				<select class="location-select" id="state-combobox">
+				<select class="location-select" name="state" id="state-combobox">
 
 					<?php
 						if ($resultarray != null){
@@ -533,6 +549,8 @@ if (isset($_GET['id']))
 
 					<input type="hidden" name="filename1" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
 
+					<img <?php echo getPictureSrc($uid, $id, 1); ?> class="hole-image">
+
 				</div>
 
 				<div class="add-pic">
@@ -542,6 +560,8 @@ if (isset($_GET['id']))
 					<input id="file-location"  accept="image/*" type="file" name="browse02"/>
 
 					<input type="hidden" name="filename2" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
+
+					<img <?php echo getPictureSrc($uid, $id, 2); ?> class="hole-image">
 
 				</div>
 
@@ -553,6 +573,8 @@ if (isset($_GET['id']))
 
 					<input type="hidden" name="filename3" style="direction: ltr; background: transparent; position: absolute; top:0; left: 0;">
 
+					<img <?php echo getPictureSrc($uid, $id, 3); ?> class="hole-image">
+
 				</div>
 
 			</div>
@@ -561,7 +583,17 @@ if (isset($_GET['id']))
 
 		<div class="item-submit">
 
-			<input name="insert-submit" type="submit" class="form-submit-btn" value="ثبت ملک">
+			<?php
+				if ($resultarray){
+
+					echo "<input type='hidden' name='id' value='" . $id . "'>";
+
+					echo "<input name=\"update-submit\" type=\"submit\" class=\"form-submit-btn\" value=\"ثبت ملک\">";
+
+				}else
+
+					echo "<input name=\"insert-submit\" type=\"submit\" class=\"form-submit-btn\" value=\"ثبت ملک\">";
+			?>
 
 		</div>
 

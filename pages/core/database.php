@@ -12,7 +12,6 @@ $con = mysqli_connect($config['dbh'], $config['dbu'], $config['dbp'], $config['d
 
 function doquery($sql) {
     $con = &$GLOBALS['con'];
-	//echo $sql;
     return mysqli_query($con, $sql);
 }
 

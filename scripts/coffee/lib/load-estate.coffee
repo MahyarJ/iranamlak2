@@ -11,6 +11,14 @@ do estateOnClick = ->
 
 			$(form).appendTo('body').submit()
 
+		else if event.target.id is "remove-estate"
+
+			form = "<form method=\"GET\" action=\"remove-estate.php\">
+				<input type=\"hidden\" name=\"id\" value=\"#{event.target.parentNode.parentNode.id}\">
+			</form>"
+
+			$(form).appendTo('body').submit()
+
 		else
 
 			loadEstate $(this).attr('id')

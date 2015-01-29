@@ -1,7 +1,18 @@
 
 makeDropable = (packageEl, nextOne) =>
 
-	packageEl.children[0].innerText = 'تصویر را انتخاب کنید یا اینجا بیاندازید'
+	img = packageEl.querySelector ".hole-image"
+
+	if img.getAttribute("src")?
+
+	else
+
+		packageEl.children[0].innerText = 'تصویر را انتخاب کنید یا اینجا بیاندازید'
+
+		if nextOne?
+
+			$ nextOne
+			.fadeOut(0)
 
 	available = true
 
@@ -63,9 +74,15 @@ makeDropable = (packageEl, nextOne) =>
 		event.stopImmediatePropagation()
 		event.preventDefault()
 
-		packageEl.classList.remove 'dropHere'
+		unless img.getAttribute("src")?
 
-		packageEl.children[0].innerText = 'اینجا بیاندازید'
+			packageEl.classList.remove 'dropHere'
+
+			packageEl.children[0].innerText = 'اینجا بیاندازید'
+
+		else
+
+			packageEl.children[0].innerText = ""
 
 		return
 
@@ -74,9 +91,15 @@ makeDropable = (packageEl, nextOne) =>
 		event.stopImmediatePropagation()
 		event.preventDefault()
 
-		packageEl.classList.remove 'dropHere'
+		unless img.getAttribute("src")?
 
-		packageEl.children[0].innerText = 'اینجا بیاندازید'
+			packageEl.classList.remove 'dropHere'
+
+			packageEl.children[0].innerText = 'اینجا بیاندازید'
+
+		else
+
+			packageEl.children[0].innerText = ""
 
 		return
 
@@ -187,13 +210,9 @@ packageSendForm = (fd, data, name, el) =>
 
 				else
 
-					img = document.createElement 'img'
-
-					img.classList.add 'hole-image'
+					img = el.querySelector ".hole-image"
 
 					img.src = dataObj.url
-
-					el.appendChild img
 
 			$ '[name=insert-submit]'
 			.removeAttr('disabled')
@@ -218,9 +237,3 @@ all = document.querySelectorAll '.add-pic'
 makeDropable all[0], all[1]
 makeDropable all[1], all[2]
 makeDropable all[2]
-
-$ all[1]
-.fadeOut(0)
-
-$ all[2]
-.fadeOut(0)

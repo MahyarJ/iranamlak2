@@ -91,7 +91,8 @@ function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, 
 	if ($editable != false)
 	{
 
-		$editButton = "<div class=\"edit\"><input id=\"edit-estate\" type=\"submit\" value=\"ویرایش\"></form></div>";
+		$editButton = "<div class=\"estate-modify edit\"><input id=\"edit-estate\" type=\"submit\" value=\"ویرایش\"></div>";
+		$removeButton = "<div class=\"estate-modify remove\"><input id=\"remove-estate\" type=\"submit\" value=\"حذف\"></div>";
 
 	}
 
@@ -129,6 +130,7 @@ function generateEstateRow($id, $date, $totalPrice, $zirbana, $gheimat, $state, 
 		</div>
 
 		$editButton
+		$removeButton
 
 	</div>
 	";
